@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@600;700&display=swap');
-
-@font-face {
+/* @font-face {
     font-family: 'Livvic:Bold';
     src: url('https://static.figma.com/font/Livvic-Bold_2') format('woff2');
     font-weight: 700;
@@ -12,12 +10,16 @@
     src: url('https://static.figma.com/font/Livvic-SemiBold_2') format('woff2');
     font-weight: 600;
     font-style: normal;
-}
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@600;700&display=swap');
 
 :root {
     /* Typography — family */
-    --font-heading: 'Livvic:Bold', 'Livvic', sans-serif;
-    --font-body: 'Livvic:SemiBold', 'Livvic', sans-serif;
+    --font-heading: 'Livvic', sans-serif;
+    --font-weight-heading: 700;
+    --font-body: 'Livvic', sans-serif;
+    --font-weight-body: 600;
 
     /* COLORS - Primary */
     --color-midnight-green: #014E56;
@@ -51,36 +53,42 @@
 
     .h1-large {
         font-family: var(--font-heading);
+        font-weight: var(--font-weight-heading);
         font-size: var(--text-h1-large);
         line-height: var(--line-h1-large);
     }
 
     .h1-small {
         font-family: var(--font-heading);
+        font-weight: var(--font-weight-heading);
         font-size: var(--text-h1-small);
         line-height: var(--line-h1-small);
     }
 
     .h2 {
         font-family: var(--font-heading);
+        font-weight: var(--font-weight-heading);
         font-size: var(--text-h2);
         line-height: var(--line-h2);
     }
 
     .h3 {
         font-family: var(--font-heading);
+        font-weight: var(--font-weight-heading);
         font-size: var(--text-h3);
         line-height: var(--line-h3);
     }
 
     .body-1 {
         font-family: var(--font-body);
+        font-weight: var(--font-weight-body);
         font-size: var(--text-body-1);
         line-height: var(--line-body-1);
     }
 
     .body-2 {
         font-family: var(--font-body);
+        font-weight: var(--font-weight-body);
         font-size: var(--text-body-2);
         line-height: var(--line-body-2);
     }
