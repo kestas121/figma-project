@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  font-family: var(--font-body);
+}
+ 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ 
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+ 
+.container {
+  max-width: 1440px; /* not yet in style.css tokens */
+  margin: 0 auto;
+  padding-left: 165px; /* not yet in style.css tokens */
+  padding-right: 165px;
+}
+ 
+/* ============ HERO / HEADER ============ */
+.hero {
+  background: var(--color-midnight-green);
+  color: var(--color-white);
+  padding-bottom: 180px; /* room for the bleeding shape below */
+  position: relative;
+  overflow: visible;
+}
+ 
+.shape-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 700px; /* reference hero height at desktop */
+  overflow: visible;
+  pointer-events: none;
+  z-index: 0;
+}
+ 
+.shape-layer img {
+  position: absolute;
+}
+ 
+/* Left ring — bleeds off the left edge */
+.shape-home-1 {
+  width: 200px;
+  top: 250px;
+  left: -100px;
+}
+ 
+/* Darker halo shape, sits behind the right composite, bleeds off the right edge */
+.shape-home-3 {
+  width: 200px;
+  top: 440px;
+  right: -100px;
+  z-index: 0;
+}
+ 
+/* Coral ring + mint stripes + square composite — bleeds below the hero */
+.shape-home-2 {
+  width: 358px;
+  top: 600px;
+  right: 165px;
+  z-index: 1;
+}
+ 
+.hero > *:not(.shape-layer) {
+  position: relative;
+  z-index: 2;
+}
+ 
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 165px;
+}
+ 
+.site-header-left {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+ 
+.logo {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+  font-size: 24px;
+  letter-spacing: -0.5px;
+}
+ 
+.main-nav {
+  display: flex;
+  gap: 32px;
+}
+ 
+.main-nav a {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-body);
+  font-size: 18px;
+  transition: opacity 0.2s ease;
+}
+ 
+.main-nav a:link,
+.main-nav a:visited,
+.main-nav a:active {
+  color: var(--color-white);
+}
+ 
+.main-nav a:hover,
+.main-nav a.is-active {
+  opacity: 0.75;
+}
+ 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+ 
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 32px;
+  border-radius: 24px; /* not yet in style.css tokens */
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-body);
+  font-size: 18px;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+ 
+.btn-outline {
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  background: transparent;
+}
+ 
+.btn-outline:hover {
+  background: var(--color-white);
+  color: var(--color-midnight-green);
+}
+ 
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+}
+ 
+.nav-toggle span {
+  width: 26px;
+  height: 2px;
+  background: var(--color-white);
+}
+ 
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding-top: 60px;
+}
+ 
+.hero-title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+  font-size: var(--text-h1-large);
+  line-height: var(--line-h1-large);
+}
+ 
+.hero-title .highlight {
+  color: var(--color-light-coral);
+}
+ 
+.section-accent {
+  display: inline-block;
+  width: 50px;
+  height: 4px;
+  background: var(--color-light-coral);
+  margin-bottom: 24px;
+}
+ 
+.hero-lede {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-body);
+  font-size: var(--text-body-1);
+  line-height: var(--line-body-1);
+}

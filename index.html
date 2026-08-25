@@ -2,26 +2,48 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-
-  <title>myteam | Find the best talent</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Header — myteam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style_index.css" />
 </head>
 
 <body>
 
-  <header>
-    <nav>
-      <a>logo</a>
-      <a>home</a>
-      <a>about</a>
-      <a>contact us</a>
-      <button>menu toggle</button>
-    </nav>
-    <h1>Find the best talent</h1>
-    <p>hero lede</p>
+  <header class="hero">
+    <div class="shape-layer" aria-hidden="true">
+      <img class="shape-home-3" src="assets/bg-pattern-home-3.svg" alt="" />
+      <img class="shape-home-1" src="assets/bg-pattern-home-1.svg" alt="" />
+      <img class="shape-home-2" src="assets/bg-pattern-home-2.svg" alt="" />
+    </div>
+ 
+    <div class="site-header">
+      <div class="site-header-left">
+        <a href="index.html" class="logo">myteam</a>
+        <nav class="main-nav">
+          <a href="index.html" class="is-active">home</a>
+          <a href="about.html">about</a>
+        </nav>
+      </div>
+      <div class="header-actions">
+        <a href="contact.html" class="btn btn-outline">contact us</a>
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+ 
+    <div class="container hero-grid">
+      <h1 class="hero-title">Find the <br />best <span class="highlight">talent</span></h1>
+      <div>
+        <span class="section-accent"></span>
+        <p class="hero-lede">Finding the right people and building high performing teams can be hard. Most companies
+          aren't tapping into the abundance of global talent. We're about to change that.</p>
+      </div>
+    </div>
   </header>
 
   <main>
