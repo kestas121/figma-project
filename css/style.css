@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@600;700&display=swap');
+ 
+:root {
+    /* Typography — family */
+    --font-heading: 'Livvic', sans-serif;
+    --font-weight-heading: 700;
+    --font-body: 'Livvic', sans-serif;
+    --font-weight-body: 600;
+ 
+    /* COLORS - Primary */
+    --color-midnight-green: #014E56;
+    --color-light-coral: #F67E7E;
+    --color-white: #FFFFFF;
+ 
+    /* COLORS - Secondary */
+    --color-rapture-blue: #79C8C7;
+    --color-police-blue: #2C6269;
+    --color-deep-jungle-green: #004047;
+    --color-sacramento-state-green: #012F34;
+    --color-dark-green: #002529;
+ 
+    /* Typography — sizes */
+    --text-h1-large: 100px;
+    --text-h1-small: 64px;
+    --text-h2: 48px;
+    --text-h3: 18px;
+    --text-body-1: 18px;
+    --text-body-2: 15px;
+    --text-label: 13px;
+ 
+    /* Typography — line heights */
+    --line-h1-large: 100px;
+    --line-h1-small: 56px;
+    --line-h2: 48px;
+    --line-h3: 28px;
+    --line-body-1: 28px;
+    --line-body-2: 25px;
+}
+ 
+.h1-large {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-heading);
+    font-size: var(--text-h1-large);
+    line-height: var(--line-h1-large);
+}
+ 
+.h1-small {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-heading);
+    font-size: var(--text-h1-small);
+    line-height: var(--line-h1-small);
+}
+ 
+.h2 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-heading);
+    font-size: var(--text-h2);
+    line-height: var(--line-h2);
+}
+ 
+.h3 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-heading);
+    font-size: var(--text-h3);
+    line-height: var(--line-h3);
+}
+ 
+.body-1 {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-body);
+    font-size: var(--text-body-1);
+    line-height: var(--line-body-1);
+}
+ 
+.body-2 {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-body);
+    font-size: var(--text-body-2);
+    line-height: var(--line-body-2);
+}
