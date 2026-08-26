@@ -4,10 +4,60 @@
     box-sizing: border-box;
 }
 
-.h2 {
+.white-text {
     color: var(--color-white);
+}
+
+.donut-size {
+  width: 200px;
+  height: 200px;
+}
+
+/* HEADER AND NAV STUFF */
+
+header {
+    background-color: var(--color-midnight-green);
+    position: relative;
+    overflow: hidden;
+    height: 517px;
+    max-width: 1440px;
+
+}
+
+.header-donut {
+    position: absolute;
+    right: -100px;
+    bottom: 0px;
+}
+
+.body1text {
+    color: var(--color-white);
+}
+
+
+.header-title {
+    color: var(--color-white);
+}
+
+.container-about {
+  max-width: 1110px;
+  margin: 0 auto;
+  margin-top: 120px;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  
+}
+
+.about-description {
+    text-align: left;
+}
+/* Clients Section */
+
+.h2 {
     margin: 0 0 3rem;
-    /* spacing between heading and logos */
     text-align: center;
 }
 
