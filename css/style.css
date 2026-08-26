@@ -5,16 +5,19 @@
     --font-weight-heading: 700;
     --font-body: 'Livvic', sans-serif;
     --font-weight-body: 600;
+
     /* COLORS - Primary */
     --color-midnight-green: #014E56;
     --color-light-coral: #F67E7E;
     --color-white: #FFFFFF;
+
     /* COLORS - Secondary */
     --color-rapture-blue: #79C8C7;
     --color-police-blue: #2C6269;
     --color-deep-jungle-green: #004047;
     --color-sacramento-state-green: #012F34;
     --color-dark-green: #002529;
+
     /* Typography — sizes */
     --text-h1-large: 100px;
     --text-h1-small: 64px;
@@ -23,6 +26,7 @@
     --text-body-1: 18px;
     --text-body-2: 15px;
     --text-label: 13px;
+
     /* Typography — line heights */
     --line-h1-large: 100px;
     --line-h1-small: 56px;
