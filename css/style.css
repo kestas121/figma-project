@@ -1,19 +1,4 @@
-/* @font-face {
-    font-family: 'Livvic:Bold';
-    src: url('https://static.figma.com/font/Livvic-Bold_2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Livvic:SemiBold';
-    src: url('https://static.figma.com/font/Livvic-SemiBold_2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-} */
-
 @import url('https://fonts.googleapis.com/css2?family=Livvic:wght@600;700&display=swap');
-
 :root {
     /* Typography — family */
     --font-heading: 'Livvic', sans-serif;
@@ -50,45 +35,39 @@
     --line-body-1: 28px;
     --line-body-2: 25px;
 }
-
-    .h1-large {
-        font-family: var(--font-heading);
-        font-weight: var(--font-weight-heading);
-        font-size: var(--text-h1-large);
-        line-height: var(--line-h1-large);
-    }
-
-    .h1-small {
-        font-family: var(--font-heading);
-        font-weight: var(--font-weight-heading);
-        font-size: var(--text-h1-small);
-        line-height: var(--line-h1-small);
-    }
-
-    .h2 {
-        font-family: var(--font-heading);
-        font-weight: var(--font-weight-heading);
-        font-size: var(--text-h2);
-        line-height: var(--line-h2);
-    }
-
-    .h3 {
-        font-family: var(--font-heading);
-        font-weight: var(--font-weight-heading);
-        font-size: var(--text-h3);
-        line-height: var(--line-h3);
-    }
-
-    .body-1 {
-        font-family: var(--font-body);
-        font-weight: var(--font-weight-body);
-        font-size: var(--text-body-1);
-        line-height: var(--line-body-1);
-    }
-
-    .body-2 {
-        font-family: var(--font-body);
-        font-weight: var(--font-weight-body);
-        font-size: var(--text-body-2);
-        line-height: var(--line-body-2);
-    }
+.h1-large {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-heading);
+    font-size: var(--text-h1-large);
+    line-height: var(--line-h1-large);
+}
+.h1-small {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-heading);
+    font-size: var(--text-h1-small);
+    line-height: var(--line-h1-small);
+}
+.h2 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-heading);
+    font-size: var(--text-h2);
+    line-height: var(--line-h2);
+}
+.h3 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-heading);
+    font-size: var(--text-h3);
+    line-height: var(--line-h3);
+}
+.body-1 {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-body);
+    font-size: var(--text-body-1);
+    line-height: var(--line-body-1);
+}
+.body-2 {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-body);
+    font-size: var(--text-body-2);
+    line-height: var(--line-body-2);
+}

@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.h2 {
+    color: var(--color-white);
+    margin: 0 0 3rem;
+    /* spacing between heading and logos */
+    text-align: center;
+}
+
+.about-clients {
+    background-color: var(--color-sacramento-state-green);
+    height: 437px;
+    position: relative;
+
+}
+
+.clients-container {
+    position: relative;
+    max-width: 1110px;
+    margin: 0 auto;
+    padding-left: 115px;
+    padding-right: 115px;
+    padding-bottom: 140px;
+    padding-top: 140px;
+    height: 157px;
+
+}
+
+.logo-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.logo-list img {
+    width: 100%;
+    height: auto;
+}
+
+.clients-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
