@@ -49,7 +49,7 @@
     --line-h3: 28px;
     --line-body-1: 28px;
     --line-body-2: 25px;
-
+}
 
     .h1-large {
         font-family: var(--font-heading);
@@ -92,4 +92,3 @@
         font-size: var(--text-body-2);
         line-height: var(--line-body-2);
     }
-}
