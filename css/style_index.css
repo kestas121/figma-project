@@ -3,60 +3,59 @@
   margin: 0;
   padding: 0;
 }
- 
+
 body {
   font-family: var(--font-body);
 }
- 
+
 a {
   text-decoration: none;
   color: inherit;
 }
- 
+
 button {
   cursor: pointer;
   background: none;
   border: none;
 }
- 
+
 .container {
   max-width: 1440px; /* not yet in style.css tokens */
   margin: 0 auto;
   padding-left: 165px; /* not yet in style.css tokens */
   padding-right: 165px;
 }
- 
+
 /* ============ HERO / HEADER ============ */
 .hero {
   background: var(--color-midnight-green);
   color: var(--color-white);
-  padding-bottom: 180px; /* room for the bleeding shape below */
+  padding-bottom: 80px;
   position: relative;
-  overflow: visible;
+  overflow: visible; /* lets the coral composite bleed into the section below, matching Figma */
 }
- 
+
 .shape-layer {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 700px; /* reference hero height at desktop */
+  inset: 0; /* stretches to the hero's real rendered height, not a hardcoded guess */
   overflow: visible;
   pointer-events: none;
-  z-index: 0;
+  /* no z-index here — it must not trap children in a sub-context,
+     or shape-home-2's z-index can't compete against the next section */
 }
- 
+
 .shape-layer img {
   position: absolute;
 }
- 
-/* Left ring — bleeds off the left edge */
+
+/* Left ring — aligned near the bottom of the heading, bleeds off the left edge */
 .shape-home-1 {
   width: 200px;
-  top: 250px;
+  top: 50%;
+  transform: translateY(-20%);
   left: -100px;
 }
- 
+
 /* Darker halo shape, sits behind the right composite, bleeds off the right edge */
 .shape-home-3 {
   width: 200px;
@@ -64,69 +63,69 @@ button {
   right: -100px;
   z-index: 0;
 }
- 
-/* Coral ring + mint stripes + square composite — bleeds below the hero */
+
+/* Coral ring + mint stripes + square composite — bleeds below the hero, into the value-props section */
 .shape-home-2 {
   width: 358px;
-  top: 600px;
+  bottom: -100px;
   right: 165px;
   z-index: 1;
 }
- 
+
 .hero > *:not(.shape-layer) {
   position: relative;
   z-index: 2;
 }
- 
+
 .site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 32px 165px;
 }
- 
+
 .site-header-left {
   display: flex;
   align-items: center;
   gap: 100px;
 }
- 
+
 .logo {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-heading);
   font-size: 24px;
   letter-spacing: -0.5px;
 }
- 
+
 .main-nav {
   display: flex;
   gap: 32px;
 }
- 
+
 .main-nav a {
   font-family: var(--font-body);
   font-weight: var(--font-weight-body);
   font-size: 18px;
   transition: opacity 0.2s ease;
 }
- 
+
 .main-nav a:link,
 .main-nav a:visited,
 .main-nav a:active {
   color: var(--color-white);
 }
- 
+
 .main-nav a:hover,
 .main-nav a.is-active {
   opacity: 0.75;
 }
- 
+
 .header-actions {
   display: flex;
   align-items: center;
   gap: 16px;
 }
- 
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -139,30 +138,30 @@ button {
   white-space: nowrap;
   transition: background 0.2s ease, color 0.2s ease;
 }
- 
+
 .btn-outline {
   border: 2px solid var(--color-white);
   color: var(--color-white);
   background: transparent;
 }
- 
+
 .btn-outline:hover {
   background: var(--color-white);
   color: var(--color-midnight-green);
 }
- 
+
 .nav-toggle {
   display: none;
   flex-direction: column;
   gap: 5px;
 }
- 
+
 .nav-toggle span {
   width: 26px;
   height: 2px;
   background: var(--color-white);
 }
- 
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -170,18 +169,18 @@ button {
   align-items: center;
   padding-top: 60px;
 }
- 
+
 .hero-title {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-heading);
   font-size: var(--text-h1-large);
   line-height: var(--line-h1-large);
 }
- 
+
 .hero-title .highlight {
   color: var(--color-light-coral);
 }
- 
+
 .section-accent {
   display: inline-block;
   width: 50px;
@@ -189,10 +188,88 @@ button {
   background: var(--color-light-coral);
   margin-bottom: 24px;
 }
- 
+
 .hero-lede {
   font-family: var(--font-body);
   font-weight: var(--font-weight-body);
   font-size: var(--text-body-1);
   line-height: var(--line-body-1);
+}
+
+/* ============ VALUE PROPS ============ */
+.value-props-section {
+  background: var(--color-sacramento-state-green);
+  color: var(--color-white);
+  padding: 140px 0 100px;
+  position: relative;
+}
+
+.value-props-section > *:not(.shape-layer) {
+  position: relative;
+  z-index: 2;
+}
+
+.value-props-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.value-props-heading-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.value-props-title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+  font-size: var(--text-h2);
+  line-height: var(--line-h2);
+}
+
+.value-prop-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.value-prop {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.value-prop-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-police-blue);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-prop-icon img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.value-prop-heading {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+  font-size: var(--text-h3);
+  line-height: var(--line-h3);
+  color: var(--color-light-coral);
+  margin-bottom: 4px;
+}
+
+.value-prop-text {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-body);
+  font-size: var(--text-body-2);
+  line-height: var(--line-body-2);
+  opacity: 0.8;
 }
