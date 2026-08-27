@@ -3,79 +3,156 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Header — myteam</title>
+  <meta name="viewport" content="width=1440" />
+  <title>myteam — Find the best talent</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+    rel="stylesheet" />
+
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/style_index.css" />
 </head>
 
 <body>
 
+  <!-- ================= HERO ================= -->
   <header class="hero">
     <div class="shape-layer" aria-hidden="true">
-      <img class="shape-home-3" src="assets/bg-pattern-home-3.svg" alt="" />
       <img class="shape-home-1" src="assets/bg-pattern-home-1.svg" alt="" />
       <img class="shape-home-2" src="assets/bg-pattern-home-2.svg" alt="" />
     </div>
- 
-    <div class="site-header">
+
+    <div class="container site-header">
       <div class="site-header-left">
-        <a href="index.html" class="logo">myteam</a>
-        <nav class="main-nav">
+        <a href="index.html" class="logo">
+          <img src="assets/logo.svg" alt="myteam" />
+        </a>
+        <nav class="main-nav body-1">
           <a href="index.html" class="is-active">home</a>
           <a href="about.html">about</a>
         </nav>
       </div>
-      <div class="header-actions">
-        <a href="contact.html" class="btn btn-outline">contact us</a>
-        <button class="nav-toggle" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+
+      <a href="contact.html" class="btn btn-outline">contact us</a>
     </div>
- 
+
     <div class="container hero-grid">
-      <h1 class="hero-title">Find the <br />best <span class="highlight">talent</span></h1>
-      <div>
-        <span class="section-accent"></span>
-        <p class="hero-lede">Finding the right people and building high performing teams can be hard. Most companies
-          aren't tapping into the abundance of global talent. We're about to change that.</p>
+      <h1 class="hero-title h1-large">Find the<br />best <span class="highlight">talent</span></h1>
+
+      <div class="hero-lede-col">
+        <span class="section-accent section-accent--blue"></span>
+        <p class="hero-lede body-1">Finding the right people and building high performing teams can be hard.
+          Most companies aren&rsquo;t tapping into the abundance of global talent. We&rsquo;re about to
+          change that.</p>
       </div>
     </div>
   </header>
 
   <main>
 
-    <section> <!-- value props -->
-      <h2>Build & manage distributed teams…</h2>
-      <div>
-        <img alt="" /> <!-- icon -->
-        <h3>Experienced Individuals</h3>
-        <p>…</p>
+    <!-- ================= Entry section ================= -->
+    <section class="value-props-section">
+      <div class="shape-layer" aria-hidden="true">
+        <img class="shape-home-3" src="assets/bg-pattern-home-3.svg" alt="" />
+      </div>
 
-        <img alt="" />
-        <h3>Easy to Implement</h3>
-        <p>…</p>
+      <div class="container value-props-grid">
+        <div class="value-props-heading-col">
+          <span class="section-accent"></span>
+          <h2 class="value-props-title h2">Build &amp; manage distributed teams like no one else.</h2>
+        </div>
 
-        <img alt="" />
-        <h3>Enhanced Productivity</h3>
-        <p>…</p>
+        <ul class="value-prop-list">
+          <li class="value-prop">
+            <div class="value-prop-icon">
+              <img src="assets/icon-person.svg" alt="" aria-hidden="true" />
+            </div>
+            <div class="value-prop-body">
+              <h3 class="value-prop-heading h3">Experienced Individuals</h3>
+              <p class="value-prop-text body-2">Our network is made up of highly experienced professionals
+                who are passionate about what they do.</p>
+            </div>
+          </li>
+
+          <li class="value-prop">
+            <div class="value-prop-icon">
+              <img src="assets/icon-cog.svg" alt="" aria-hidden="true" />
+            </div>
+            <div class="value-prop-body">
+              <h3 class="value-prop-heading h3">Easy to Implement</h3>
+              <p class="value-prop-text body-2">Our processes have been refined over years of implementation
+                meaning our teams always deliver.</p>
+            </div>
+          </li>
+
+          <li class="value-prop">
+            <div class="value-prop-icon">
+              <img src="assets/icon-chart.svg" alt="" aria-hidden="true" />
+            </div>
+            <div class="value-prop-body">
+              <h3 class="value-prop-heading h3">Enhanced Productivity</h3>
+              <p class="value-prop-text body-2">Our customized platform with in-built analytics helps you
+                manage your distributed teams.</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section> <!-- testimonials -->
-      <h2>Delivering real results…</h2>
-      <div>
-        <img alt="" /> <!-- quote icon -->
-        <blockquote>…</blockquote>
-        <img alt="Kady Baker" />
-        <footer>
-          <cite>Kady Baker</cite>
-          <p>Product Manager at Bookmark</p>
-        </footer>
-        <!-- ×3 testimonials -->
+    <!-- ================= Team Section ================= -->
+    <section class="testimonials-section">
+      <div class="shape-layer" aria-hidden="true">
+        <img class="shape-home-4" src="assets/bg-pattern-home-4-about-3.svg" alt="" />
+        <img class="shape-home-5" src="assets/bg-pattern-home-5.svg" alt="" />
+      </div>
+
+      <div class="container">
+        <h2 class="testimonials-title h2">
+          Delivering real results for top companies. Some of our
+          <span class="highlight-blue">success stories.</span>
+        </h2>
+
+        <ul class="testimonial-list">
+          <li class="testimonial">
+            <img class="testimonial-quote-icon" src="assets/icon-quotes.svg" alt="" aria-hidden="true" />
+            <blockquote class="testimonial-quote body-2">
+              &ldquo;The team perfectly fit the specialized skill set required. They focused on the most
+              essential features helping us launch the platform eight months faster than planned.&rdquo;
+            </blockquote>
+            <p class="testimonial-name h3">Kady Baker</p>
+            <p class="testimonial-role">Product Manager at Bookmark</p>
+            <img class="testimonial-avatar" src="assets/avatar-kady.jpg" alt="Kady Baker" width="62"
+              height="62" />
+          </li>
+
+          <li class="testimonial">
+            <img class="testimonial-quote-icon" src="assets/icon-quotes.svg" alt="" aria-hidden="true" />
+            <blockquote class="testimonial-quote body-2">
+              &ldquo;We needed to automate our entire onboarding process. The team came in and built out the
+              whole journey. Since going live, user retention has gone through the roof!&rdquo;
+            </blockquote>
+            <p class="testimonial-name h3">Aiysha Reese</p>
+            <p class="testimonial-role">Founder of Manage</p>
+            <img class="testimonial-avatar" src="assets/avatar-aiysha.jpg" alt="Aiysha Reese" width="62"
+              height="62" />
+          </li>
+
+          <li class="testimonial">
+            <img class="testimonial-quote-icon" src="assets/icon-quotes.svg" alt="" aria-hidden="true" />
+            <blockquote class="testimonial-quote body-2">
+              &ldquo;Amazing. Our team helped us build an app that delivered a new experience for hiring a
+              physio. The launch was an instant success with 100k downloads in the first month.&rdquo;
+            </blockquote>
+            <p class="testimonial-name h3">Arthur Clarke</p>
+            <p class="testimonial-role">Co-founder of MyPhysio</p>
+            <img class="testimonial-avatar" src="assets/avatar-arthur.jpg" alt="Arthur Clarke" width="62"
+              height="62" />
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -87,20 +164,55 @@
 
   </main>
 
-  <footer>
-    <a>logo</a>
-    <nav>
-      <a>home</a>
-      <a>about</a>
-    </nav>
-    <address>987 Hillcrest Lane…</address>
-    <nav> <!-- social links -->
-      <a><img alt="" /></a> <!-- facebook -->
-      <a><img alt="" /></a> <!-- pinterest -->
-      <a><img alt="" /></a> <!-- twitter -->
-    </nav>
-    <p>Copyright 2020…</p>
-  </footer>
+  <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Logo and navigation -->
+    <div class="footer-brand">
+      <a href="/" class="footer-logo"><img src="assets/logo.svg" alt="" srcset=""></a>
+
+      <nav class="footer-nav h3" aria-label="Footer navigation">
+        <a href="/">home</a>
+        <a href="/about">about</a>
+      </nav>
+    </div>
+
+    <!-- Contact information -->
+    <address class="footer-contact body-2">
+      <p>987 Hillcrest Lane</p>
+      <p>Irvine, CA</p>
+      <p>California 92714</p>
+      <p>
+        Call Us:
+        <a href="tel:+19498337432">949-833-7432</a>
+      </p>
+    </address>
+
+    <!-- Social media and copyright -->
+    <div class="footer-right body-2">
+
+      <div class="social-links">
+        <a href="#" aria-label="Facebook">
+          <img src="assets/icon-facebook.svg" alt="">
+        </a>
+
+        <a href="#" aria-label="Pinterest">
+          <img src="assets/icon-pinterest.svg" alt="">
+        </a>
+
+        <a href="#" aria-label="Twitter">
+          <img src="assets/icon-twitter.svg" alt="">
+        </a>
+      </div>
+
+      <p class="copyright">
+        Copyright 2020. All Rights Reserved
+      </p>
+
+    </div>
+
+  </div>
+</footer>
 
 </body>
 
