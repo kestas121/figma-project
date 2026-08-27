@@ -1,275 +1,208 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* =========================================================
+   Home — Desktop (1440px frame)
 
-body {
-  font-family: var(--font-body);
-}
+   Home-page sections only. The reset, .container, .shape-layer,
+   buttons, .section-accent and the header/nav all live in style.css,
+   which must be loaded first.
+   ========================================================= */
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-
-.container {
-  max-width: 1440px; /* not yet in style.css tokens */
-  margin: 0 auto;
-  padding-left: 165px; /* not yet in style.css tokens */
-  padding-right: 165px;
-}
-
-/* ============ HERO / HEADER ============ */
+/* =========================================================
+   HERO  (700px tall in the frame)
+   ========================================================= */
 .hero {
-  background: var(--color-midnight-green);
-  color: var(--color-white);
-  padding-bottom: 80px;
   position: relative;
-  overflow: visible; /* lets the coral composite bleed into the section below, matching Figma */
+  overflow: hidden;
+  background: var(--color-midnight-green);
+  padding-top: 73px;
+  padding-bottom: 250px;
 }
 
-.shape-layer {
-  position: absolute;
-  inset: 0; /* stretches to the hero's real rendered height, not a hardcoded guess */
-  overflow: visible;
-  pointer-events: none;
-  /* no z-index here — it must not trap children in a sub-context,
-     or shape-home-2's z-index can't compete against the next section */
-}
-
-.shape-layer img {
-  position: absolute;
-}
-
-/* Left ring — aligned near the bottom of the heading, bleeds off the left edge */
-.shape-home-1 {
-  width: 200px;
-  top: 50%;
-  transform: translateY(-20%);
-  left: -100px;
-}
-
-/* Darker halo shape, sits behind the right composite, bleeds off the right edge */
-.shape-home-3 {
-  width: 200px;
-  top: 440px;
-  right: -100px;
-  z-index: 0;
-}
-
-/* Coral ring + mint stripes + square composite — bleeds below the hero, into the value-props section */
-.shape-home-2 {
-  width: 358px;
-  bottom: -100px;
-  right: 165px;
+.hero > .container {
+  position: relative;
   z-index: 1;
 }
 
-.hero > *:not(.shape-layer) {
-  position: relative;
-  z-index: 2;
+/* Ring, bleeds off the left edge, vertically centred in the hero */
+.shape-home-1 {
+  width: 200px;
+  height: auto;
+  left: -100px;
+  top: 250px;
 }
 
-.site-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 32px 165px;
-}
-
-.site-header-left {
-  display: flex;
-  align-items: center;
-  gap: 100px;
-}
-
-.logo {
-  font-family: var(--font-heading);
-  font-weight: var(--font-weight-heading);
-  font-size: 24px;
-  letter-spacing: -0.5px;
-}
-
-.main-nav {
-  display: flex;
-  gap: 32px;
-}
-
-.main-nav a {
-  font-family: var(--font-body);
-  font-weight: var(--font-weight-body);
-  font-size: 18px;
-  transition: opacity 0.2s ease;
-}
-
-.main-nav a:link,
-.main-nav a:visited,
-.main-nav a:active {
-  color: var(--color-white);
-}
-
-.main-nav a:hover,
-.main-nav a.is-active {
-  opacity: 0.75;
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 32px;
-  border-radius: 24px; /* not yet in style.css tokens */
-  font-family: var(--font-body);
-  font-weight: var(--font-weight-body);
-  font-size: 18px;
-  white-space: nowrap;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.btn-outline {
-  border: 2px solid var(--color-white);
-  color: var(--color-white);
-  background: transparent;
-}
-
-.btn-outline:hover {
-  background: var(--color-white);
-  color: var(--color-midnight-green);
-}
-
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.nav-toggle span {
-  width: 26px;
-  height: 2px;
-  background: var(--color-white);
+/* Coral composite (358x200). Only the top ~85px clears the hero's bottom
+   edge — the rest is cut off by the section's overflow, as in the Figma
+   frame. Right edge lines up with the container. */
+.shape-home-2 {
+  width: 358px;
+  height: auto;   /* never pin both axes — the file keeps its own ratio */
+  right: calc(50% - 555px);
+  top: 615px;     /* 700px hero - 85px visible */
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-  padding-top: 60px;
+  grid-template-columns: 635px 445px;
+  column-gap: 30px;
+  align-items: start;
+  padding-top: 129px;
 }
 
 .hero-title {
-  font-family: var(--font-heading);
-  font-weight: var(--font-weight-heading);
-  font-size: var(--text-h1-large);
-  line-height: var(--line-h1-large);
+  letter-spacing: -1.04px;
 }
 
 .hero-title .highlight {
   color: var(--color-light-coral);
 }
 
-.section-accent {
-  display: inline-block;
-  width: 50px;
-  height: 4px;
-  background: var(--color-light-coral);
-  margin-bottom: 24px;
-}
-
 .hero-lede {
-  font-family: var(--font-body);
-  font-weight: var(--font-weight-body);
-  font-size: var(--text-body-1);
-  line-height: var(--line-body-1);
+  margin-top: 79px;
 }
 
-/* ============ VALUE PROPS ============ */
+/* =========================================================
+   Entry section  (684px tall in the frame)
+   ========================================================= */
 .value-props-section {
-  background: var(--color-sacramento-state-green);
-  color: var(--color-white);
-  padding: 140px 0 100px;
   position: relative;
+  overflow: hidden;
+  background: var(--color-sacramento-state-green);
+  padding-block: 140px;
 }
 
-.value-props-section > *:not(.shape-layer) {
+.value-props-section > .container {
   position: relative;
-  z-index: 2;
+  z-index: 1;
+}
+
+.shape-home-3 {
+  width: 200px;
+  height: auto;
+  right: -100px;
+  top: 440px;     /* 684px section - 244px tall */
 }
 
 .value-props-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 445px 540px;
+  column-gap: 125px;
   align-items: start;
 }
 
-.value-props-heading-col {
-  display: flex;
-  flex-direction: column;
-}
-
 .value-props-title {
-  font-family: var(--font-heading);
-  font-weight: var(--font-weight-heading);
-  font-size: var(--text-h2);
-  line-height: var(--line-h2);
+  margin-top: 54px;
+  letter-spacing: -0.5px;
 }
 
 .value-prop-list {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 32px;
+  padding-top: 58px;
 }
 
 .value-prop {
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  column-gap: 23px;
+  align-items: start;
 }
 
+/* The disc behind the glyph is baked into the SVG, so nothing is drawn here */
 .value-prop-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--color-police-blue);
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 72px;
 }
 
 .value-prop-icon img {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0) invert(1);
+  width: 72px;
+  height: auto;
 }
 
 .value-prop-heading {
-  font-family: var(--font-heading);
-  font-weight: var(--font-weight-heading);
-  font-size: var(--text-h3);
-  line-height: var(--line-h3);
   color: var(--color-light-coral);
-  margin-bottom: 4px;
 }
 
 .value-prop-text {
-  font-family: var(--font-body);
-  font-weight: var(--font-weight-body);
-  font-size: var(--text-body-2);
-  line-height: var(--line-body-2);
+  margin-top: 16px;
   opacity: 0.8;
+}
+
+/* =========================================================
+   Team Section  (745px tall in the frame)
+   ========================================================= */
+.testimonials-section {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-deep-jungle-green);
+  padding-block: 140px;
+  text-align: center;
+}
+
+.testimonials-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.shape-home-4 {
+  width: 147px;
+  height: auto;
+  left: 0;
+  top: 0;
+}
+
+.shape-home-5 {
+  width: 200px;
+  height: auto;
+  right: 0;
+  top: 633px;     /* sits flush with the section's bottom edge */
+}
+
+.testimonials-title {
+  width: 932px;
+  margin-inline: auto;
+  letter-spacing: -0.5px;
+}
+
+.testimonials-title .highlight-blue {
+  color: var(--color-rapture-blue);
+}
+
+.testimonial-list {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  justify-content: space-between;
+  margin-top: 56px;
+}
+
+.testimonial-quote-icon {
+  width: 67px;
+  height: 56px;
+  margin-inline: auto;
+}
+
+/* The quote text overlaps the quote mark by 20px, as in the design */
+.testimonial-quote {
+  margin-top: -20px;
+}
+
+.testimonial-name {
+  margin-top: 24px;
+  color: var(--color-rapture-blue);
+}
+
+.testimonial-role {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-style: italic;
+  font-size: var(--text-label);
+  line-height: 18px;
+}
+
+.testimonial-avatar {
+  width: 62px;
+  height: 62px;
+  margin: 32px auto 0;
+  border: 2px solid var(--color-rapture-blue);
+  border-radius: 50%;
+  object-fit: cover;
 }
