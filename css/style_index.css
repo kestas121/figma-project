@@ -37,7 +37,7 @@
   width: 358px;
   height: auto;   /* never pin both axes — the file keeps its own ratio */
   right: calc(50% - 555px);
-  top: 615px;     /* 700px hero - 85px visible */
+  top: 600px;     /* 700px hero - 85px visible */
 }
 
 .hero-grid {
