@@ -5,16 +5,19 @@
     --font-weight-heading: 700;
     --font-body: 'Livvic', sans-serif;
     --font-weight-body: 600;
+
     /* COLORS - Primary */
     --color-midnight-green: #014E56;
     --color-light-coral: #F67E7E;
     --color-white: #FFFFFF;
+
     /* COLORS - Secondary */
     --color-rapture-blue: #79C8C7;
     --color-police-blue: #2C6269;
     --color-deep-jungle-green: #004047;
     --color-sacramento-state-green: #012F34;
     --color-dark-green: #002529;
+
     /* Typography — sizes */
     --text-h1-large: 100px;
     --text-h1-small: 64px;
@@ -23,6 +26,7 @@
     --text-body-1: 18px;
     --text-body-2: 15px;
     --text-label: 13px;
+
     /* Typography — line heights */
     --line-h1-large: 100px;
     --line-h1-small: 56px;
@@ -67,3 +71,256 @@
     font-size: var(--text-body-2);
     line-height: var(--line-body-2);
 }
+
+/* FOOTER start ------------------------------------------------- */
+
+.footer {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    padding: 48px 0;
+}
+
+.footer address {
+    font-style: normal;
+}
+
+.footer-container {
+    margin: 0 auto;
+    width: min(1110px, 90%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+}
+
+/* ----Logo---- */
+.footer-logo {
+    display: inline-block;
+}
+
+/* ----Footer navigation---- */
+
+.footer-nav {
+    display: flex;
+    gap: 35px;
+    margin-top: 35px;
+}
+
+.footer-nav a {
+    color: var(--color-white);
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.footer-nav a:hover {
+    color: var(--color-rapture-blue);
+}
+
+/* ---- Contact information---- */
+
+.footer-contact {
+    margin: 0;
+    color: #9aaeb0;
+}
+
+.footer-contact p {
+    margin: 0;
+}
+
+.footer-contact a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: var(--color-rapture-blue);
+}
+
+/* ----Right side----*/
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.social-links {
+    display: flex;
+    gap: 18px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.social-links img {
+    width: 20px;
+    height: 20px;
+}
+
+.copyright {
+    margin: 55px 0 0;
+    color: #9aaeb0;
+
+}
+
+/* FOOTER END ------------------------------------------------------------------------------------- */
+
+/* SHARED / GLOBAL start ---------------------------------------------------
+   Base reset, page shell, header + navigation, buttons and the decorative
+   shape layer. All of this is reused by about.html and contact.html, so it
+   lives here rather than in a per-page sheet.
+   ------------------------------------------------------------------------ */
+ 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+body {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-body);
+    font-size: var(--text-body-2);
+    line-height: var(--line-body-2);
+    color: var(--color-white);
+    background: var(--color-midnight-green);
+    min-width: 1440px; /* desktop-only build — no breakpoints below this */
+}
+ 
+ul {
+    list-style: none;
+}
+ 
+img {
+    display: block;
+    max-width: 100%;
+}
+ 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ 
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+ 
+/* ----Page shell---- */
+/* 1110px of content, centred — the 165px side margins from the Figma frame */
+ 
+.container {
+    width: 1110px;
+    margin-inline: auto;
+}
+ 
+/* ----Decorative shape layer---- */
+/* Each section drops its artwork into one of these and clips it with
+   overflow: hidden, so nothing bleeds between sections. */
+ 
+.shape-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+ 
+.shape-layer img {
+    position: absolute;
+}
+ 
+/* ----Buttons---- */
+ 
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding-inline: 32px;
+    border-radius: 24px;
+    border: 2px solid currentColor;
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-body);
+    font-size: var(--text-body-1);
+    line-height: var(--line-body-1);
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+ 
+.btn-outline {
+    color: var(--color-white);
+}
+ 
+.btn-outline:hover {
+    background: var(--color-white);
+    color: var(--color-midnight-green);
+}
+ 
+.btn-outline-dark {
+    color: var(--color-sacramento-state-green);
+}
+ 
+.btn-outline-dark:hover {
+    background: var(--color-sacramento-state-green);
+    color: var(--color-light-coral);
+}
+ 
+/* ----Accent bar above a heading---- */
+ 
+.section-accent {
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: var(--color-light-coral);
+}
+ 
+.section-accent--blue {
+    background: var(--color-rapture-blue);
+}
+ 
+/* ----Header---- */
+ 
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+}
+ 
+.site-header-left {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+ 
+.logo img {
+    width: 160px;
+    height: 40px;
+}
+ 
+/* ----Main navigation---- */
+ 
+.main-nav {
+    display: flex;
+    gap: 40px;
+}
+ 
+.main-nav a {
+    transition: color 0.2s ease;
+}
+ 
+/* The design has no persistent current-page marker, so .is-active is left
+   unstyled — the hook stays available for templating. */
+.main-nav a:hover {
+    color: var(--color-light-coral);
+}
+ 
+/* SHARED / GLOBAL END ----------------------------------------------------- */
