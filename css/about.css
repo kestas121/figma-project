@@ -4,10 +4,65 @@
     box-sizing: border-box;
 }
 
-.h2 {
+.white-text {
     color: var(--color-white);
-    margin: 0 0 3rem;
-    /* spacing between heading and logos */
+}
+
+.donut-size {
+  width: 200px;
+  height: 200px;
+}
+
+/* HEADER AND NAV STUFF */
+
+header {
+    background-color: var(--color-midnight-green);
+    position: relative;
+    overflow: hidden;
+    height: 517px;
+    width: 100%;
+    padding-top: 73px;
+}
+
+.header-donut {
+    position: absolute;
+    right: -100px;
+    bottom: 0px;
+    width: 200px;
+}
+
+.container-about {
+  max-width: min(1110px, 90%);
+  height: 156px;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  margin-inline: auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 350px 730px;
+  gap: 30px;
+  align-items: start;
+}
+
+.about-text {
+    width: 350px;
+    height: 100px;
+}
+
+.about-description {
+    text-align: left;
+    width: 730px;
+    height: 156px;
+}
+
+.section-accent {
+    margin-bottom: 40px;
+}
+
+/* Clients Section */
+
+.h2 {
+    margin: 0 0 48px;
     text-align: center;
 }
 
@@ -34,7 +89,7 @@
     list-style: none;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 2rem;
+    gap: 32px;
     align-items: center;
 }
 
