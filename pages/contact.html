@@ -11,14 +11,19 @@
 </head>
 
 <body>
-
-  <header>
-    navigation
-    home
-    about
-    contact us
-  </header>
   
+  <header>
+        <div class="container site-header">
+      <div class="site-header-left">
+        <a href="../index.html" class="logo">
+          <img src="../assets/logo.svg" alt="myteam" />
+        </a>
+        <nav class="main-nav body-1">
+          <a href="../index.html" class="is-active">home</a>
+          <a href="/pages/about.html">about</a>
+        </nav>
+      </div>
+  </header>
 
   <main>
 
@@ -61,11 +66,10 @@
 
         <div class="contact-content-form-container">
 
-          <form class="contact-form body-1" action="#" method="post">
+          <form class="contact-form body-1" action="/pages/contact.html" method="post">
 
-           
+          
             <input type="text" id="name" name="name" placeholder="Name" />
-
            
             <input type="email" id="email" name="email" placeholder="Email" />
 
@@ -96,7 +100,7 @@
 
         <nav class="footer-nav h3" aria-label="Footer navigation">
           <a href="/">home</a>
-          <a href="/about">about</a>
+          <a href="/pages/about.html">about</a>
         </nav>
       </div>
 
