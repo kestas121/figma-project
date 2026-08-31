@@ -1,3 +1,147 @@
 @import "./style.css";
 
+* {
+    box-sizing: border-box;
+}
 
+.contact {
+    display: flex;
+    background-color: var(--color-midnight-green);
+    /* width: 1440px; */
+}
+
+.text-white {
+    color: var(--color-white);
+}
+.ask-about-us {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-heading);
+    font-size: 32px;
+    line-height: var(--line-h2);
+    color:var(--color-light-coral);
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: row;
+    /* flex-basis: 1112px; */
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* max-width: 1440px; */
+    margin: 0 auto;
+    padding: 0 40px;
+    gap: 24px;
+}
+
+.item {
+    flex: 1;
+    max-width: 300px;
+    /* Adjust based on your design requirements */
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+
+
+.contact-content-form-container {
+    display: flex;
+    flex-direction: column;
+    width: 542px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 400px; */
+    margin: 0 auto;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+.submit-btn {
+    /* width: 30%; */
+    padding: 12px;
+    color: var(--color-deep-jungle-green);
+    border: 2px;
+    width: 123px;
+    height: 48px;
+    border-radius: 24px;
+    cursor: pointer;
+    margin-top: 24px;
+}
+
+
+.contact-form {
+    width: 100%;
+    padding: 0 4px;
+}
+
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    padding-top: 24px;
+    padding-left: 24px;
+
+    /* padding: 0 28px 18px; */
+    background: transparent;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    outline: none;
+
+    font-size: 20px;
+    font-family: inherit;
+}
+
+
+
+input {
+    height: 47px;
+}
+
+textarea {
+    height: 150px;
+    /* resize: vertical; */
+}
+
+input:focus,
+textarea:focus {
+    border-bottom-color: #fff;
+}
+
+.message-field {
+    margin-bottom: 48px;
+}
+
+.message-field label {
+    margin-bottom: 36px;
+}
+
+button {
+    width: 246px;
+    height: 96px;
+    border: none;
+    border-radius: 50px;
+    background: #fff;
+    color: #004957;
+    font-size: 28px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: lowercase;
+}
