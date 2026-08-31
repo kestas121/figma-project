@@ -20,8 +20,8 @@ header {
     position: relative;
     overflow: hidden;
     height: 517px;
-    width: 1440px;
-
+    width: 100%;
+    padding-top: 73px;
 }
 
 .header-donut {
@@ -31,33 +31,18 @@ header {
     width: 200px;
 }
 
-/* .body1text {
-    color: var(--color-white);
-}
-
-
-.header-title {
-    color: var(--color-white);
-} */
-
 .container-about {
-  max-width: 1110px;
+  max-width: min(1110px, 90%);
   height: 156px;
   margin-top: 120px;
   margin-bottom: 120px;
-  margin-left: 165px;
-  margin-right: 165px;
+  margin-inline: auto;
   padding: 0 24px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
-  
+  grid-template-columns: 350px 730px;
+  gap: 30px;
+  align-items: start;
 }
-/* 
-.about-text {
-    text-align: left;
-} */
 
 .about-text {
     width: 350px;
@@ -69,6 +54,11 @@ header {
     width: 730px;
     height: 156px;
 }
+
+.section-accent {
+    margin-bottom: 40px;
+}
+
 /* Clients Section */
 
 .h2 {
