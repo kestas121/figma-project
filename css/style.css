@@ -185,7 +185,7 @@
    shape layer. All of this is reused by about.html and contact.html, so it
    lives here rather than in a per-page sheet.
    ------------------------------------------------------------------------ */
- 
+
 *,
 *::before,
 *::after {
@@ -193,7 +193,7 @@
     margin: 0;
     padding: 0;
 }
- 
+
 body {
     font-family: var(--font-body);
     font-weight: var(--font-weight-body);
@@ -201,53 +201,57 @@ body {
     line-height: var(--line-body-2);
     color: var(--color-white);
     background: var(--color-midnight-green);
-    min-width: 1440px; /* desktop-only build — no breakpoints below this */
+
+
+    /* min-width: 1440px; */
+
+    /* desktop-only build — no breakpoints below this */
 }
- 
+
 ul {
     list-style: none;
 }
- 
+
 img {
     display: block;
     max-width: 100%;
 }
- 
+
 a {
     text-decoration: none;
     color: inherit;
 }
- 
+
 button {
     cursor: pointer;
     background: none;
     border: none;
 }
- 
+
 /* ----Page shell---- */
 /* 1110px of content, centred — the 165px side margins from the Figma frame */
- 
+
 .container {
     width: 1110px;
     margin-inline: auto;
 }
- 
+
 /* ----Decorative shape layer---- */
 /* Each section drops its artwork into one of these and clips it with
    overflow: hidden, so nothing bleeds between sections. */
- 
+
 .shape-layer {
     position: absolute;
     inset: 0;
     pointer-events: none;
 }
- 
+
 .shape-layer img {
     position: absolute;
 }
- 
+
 /* ----Buttons---- */
- 
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -263,114 +267,153 @@ button {
     white-space: nowrap;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
- 
+
 .btn-outline {
     color: var(--color-white);
 }
- 
+
 .btn-outline:hover {
     background: var(--color-white);
     color: var(--color-midnight-green);
 }
- 
+
 .btn-outline-dark {
     color: var(--color-sacramento-state-green);
 }
- 
+
 .btn-outline-dark:hover {
     background: var(--color-sacramento-state-green);
     color: var(--color-light-coral);
 }
- 
+
 /* ----Accent bar above a heading---- */
- 
+
 .section-accent {
     display: block;
     width: 50px;
     height: 4px;
     background: var(--color-light-coral);
 }
- 
+
 .section-accent--blue {
     background: var(--color-rapture-blue);
 }
- 
+
 /* ----Header---- */
- 
+
 .site-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 48px;
 }
- 
+
 .site-header-left {
     display: flex;
     align-items: center;
     gap: 80px;
 }
- 
+
 .logo img {
     width: 160px;
     height: 40px;
 }
- 
+
 /* ----Main navigation---- */
- 
+
 .main-nav {
     display: flex;
     gap: 40px;
 }
- 
+
 .main-nav a {
     transition: color 0.2s ease;
 }
- 
+
 /* The design has no persistent current-page marker, so .is-active is left
    unstyled — the hook stays available for templating. */
 .main-nav a:hover {
     color: var(--color-light-coral);
 }
- 
+
 /* SHARED / GLOBAL END ----------------------------------------------------- */
 
 
 /* -----CTA banner-----START */
 .banner {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  background-color: var(--color-light-coral);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+    position: relative;
+    height: 200px;
+    background-color: var(--color-light-coral);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .banner figure {
-    position:absolute;
+    position: absolute;
     left: 0;
     bottom: 0;
+    margin: 0;
+    width: 200px;
+    height: 244px;
+    z-index: 1;
+}
+
+.banner figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left bottom;
 }
 
 .banner-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 917px;
+    margin: 0 auto;
+    left: 150px;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    flex-basis: 917px;
+    padding: 0 20px;
 }
 
 .banner-content h2 {
-  color: var(--color-sacramento-state-green);
-  font-family: var(--font-heading);
-  font-size: var(--text-h2);
-  font-weight: var(--font-weight-heading);
-  line-height: var(--line-h2);
+    color: var(--color-sacramento-state-green);
+    font-family: var(--font-heading);
+    font-size: var(--text-h2);
+    font-weight: var(--font-weight-heading);
+    line-height: var(--line-h2);
+    margin: 0;
 }
 
 .btn-banner:hover {
-    color:var(--color-white);
+    color: var(--color-white);
     border: none;
 }
+
+
+@media (max-width: 1440px) {
+    .banner figure {   
+        bottom: -22px;      
+    }
+
+    .banner-content {
+        max-width: 600px;
+        left: 0px;
+    }
+
+    .banner-content h2 {       
+        font-size: 32px;
+        line-height: 32px;
+    }    
+}
+
+@media (max-width: 768px) {
+    .banner {
+        background-color: red;
+    }
+}
+
 /* -----CTA banner-----END */
