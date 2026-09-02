@@ -30,14 +30,15 @@
   top: 250px;
 }
 
-/* Coral composite (358x200). Only the top ~85px clears the hero's bottom
-   edge — the rest is cut off by the section's overflow, as in the Figma
-   frame. Right edge lines up with the container. */
+/* Coral composite. The exported file is already cropped to just the part that
+   shows, so it is anchored to the section's bottom edge rather than positioned
+   from the top — that way it stays flush whatever height the hero ends up.
+   Right edge lines up with the container. */
 .shape-home-2 {
   width: 358px;
   height: auto;   /* never pin both axes — the file keeps its own ratio */
   right: calc(50% - 555px);
-  top: 600px;     /* 700px hero - 85px visible */
+  bottom: 0;
 }
 
 .hero-grid {
@@ -79,7 +80,7 @@
   width: 200px;
   height: auto;
   right: -100px;
-  top: 440px;     /* 684px section - 244px tall */
+  bottom: 0;
 }
 
 .value-props-grid {
@@ -154,7 +155,7 @@
   width: 200px;
   height: auto;
   right: 0;
-  top: 633px;     /* sits flush with the section's bottom edge */
+  bottom: 0;
 }
 
 .testimonials-title {
@@ -205,4 +206,56 @@
   border: 2px solid var(--color-rapture-blue);
   border-radius: 50%;
   object-fit: cover;
+}
+
+/* =========================================================
+   TABLET  (768px frame)
+
+   Hero only — it has to convert alongside the header, since the
+   header sits inside it. The sections below are still pinned to
+   the desktop layout by the responsive block in style.css.
+   ========================================================= */
+@media (max-width: 1109px) {
+
+  /* Header moves to y=64 and the section stays 700px tall.
+     64 + 48 header + 112 = 224, where the heading starts. */
+  .hero {
+    padding-top: 64px;
+    padding-bottom: 256px;
+    text-align: center;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    padding-top: 112px;
+  }
+
+  .hero-title {
+    font-size: var(--text-h1-small);   /* 64px */
+    line-height: var(--line-h1-small); /* 56px */
+    letter-spacing: -0.67px;
+  }
+
+  /* The tablet frame drops the accent bar above the lede */
+  .hero-lede-col .section-accent {
+    display: none;
+  }
+
+  .hero-lede {
+    width: 457px;
+    max-width: 100%;
+    margin: 24px auto 0;
+  }
+
+  /* The left ring is not in the tablet frame */
+  .shape-home-1 {
+    display: none;
+  }
+
+  /* Coral composite moves from the right edge to dead centre */
+  .shape-home-2 {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
