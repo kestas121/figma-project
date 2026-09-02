@@ -201,11 +201,6 @@ body {
     line-height: var(--line-body-2);
     color: var(--color-white);
     background: var(--color-midnight-green);
-
-
-    /* min-width: 1440px; */
-
-    /* desktop-only build — no breakpoints below this */
 }
 
 ul {
