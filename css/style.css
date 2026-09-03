@@ -392,6 +392,36 @@ button {
 @media (max-width: 1440px) {
     .banner figure {   
         bottom: -22px;      
+/* RESPONSIVE start --------------------------------------------------------
+   The page is being converted to tablet one section at a time. Sections
+   listed below are still desktop-only: they are pinned to the 1440px layout
+   so they don't collapse while the converted ones go fluid. This costs a
+   horizontal scrollbar under 1440px — it disappears once the last selector
+   is removed from this block.
+   ------------------------------------------------------------------------ */
+
+/* ----Not yet converted---- */
+/* Delete a selector from here when that section gets its own breakpoints. */
+
+.testimonials-section,
+.banner,
+.footer {
+    min-width: 1440px;
+}
+
+.testimonials-section .container {
+    width: 1110px;
+}
+
+/* ----Tablet (768px frame)---- */
+/* Header. The container narrows to 689px (39px side margins), the logo
+   drops to 128x32, and the gap to the nav closes from 80px to 48px. The nav
+   gap itself and the button are unchanged from desktop. */
+
+@media (max-width: 1109px) {
+
+    .container {
+        width: min(689px, calc(100% - 78px));
     }
 
     .banner-content {

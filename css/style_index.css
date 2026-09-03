@@ -258,4 +258,40 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+  /* ---- Entry section (710px tall in the tablet frame) ---- */
+
+  .value-props-section {
+    padding-block: 100px;
+  }
+
+  /* Narrower than the header's 689px — the tablet frame insets this
+     section's content to 573px (97px side margins). */
+  .value-props-section .container {
+    width: min(573px, calc(100% - 78px));
+  }
+
+  /* Heading and list stack instead of sitting side by side */
+  .value-props-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .value-props-title {
+    width: 445px;
+    max-width: 100%;
+    margin-top: 32px;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.33px;
+  }
+
+  .value-prop-list {
+    padding-top: 64px;
+  }
+
+  /* The artwork moves to the top of the section on tablet */
+  .shape-home-3 {
+    top: 0;
+    bottom: auto;
+  }
 }
