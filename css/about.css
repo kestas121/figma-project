@@ -66,6 +66,7 @@ header {
     right: 0px;
 }
 
+
 .directors {
     background-color: var(--color-deep-jungle-green);
     position: relative;
@@ -104,6 +105,7 @@ header {
     border-radius: 50%;
     border-style: solid;
     border-color: #C4FFFE;
+    border-width: 2px;
 }
 
 .director-name {
@@ -114,10 +116,11 @@ header {
 }
 
 .director-role {
+    font-style:italic;
     font-size: 15px;
-    font-weight: 500;
     line-height: 25px;
     color: var(--color-white);
+    opacity: 85%;
 }
 
 .card-toggle {
@@ -279,7 +282,6 @@ header {
     -webkit-mask-composite: source-out;
 }
 
-
 /* Clients Section */
 
 .h2 {
@@ -323,4 +325,11 @@ header {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+
+
+/* OVERRIDES */
+.director-header {
+    margin-bottom: 64px;
 }
