@@ -81,6 +81,10 @@
 
 /* FOOTER start ------------------------------------------------- */
 
+/* html {
+    overflow-y: hidden;
+} */
+
 .footer {
     background-color: var(--color-dark-green);
     color: var(--color-white);
@@ -372,11 +376,9 @@ button {
     width: 100%;
     max-width: 917px;
     margin: 0 auto;
-    left: 150px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
 }
 
 .banner-content h2 {
@@ -385,8 +387,8 @@ button {
     font-size: var(--text-h2);
     font-weight: var(--font-weight-heading);
     line-height: var(--line-h2);
-    margin: 0;
 }
+
 
 .btn-banner:hover {
     color: var(--color-white);
@@ -394,7 +396,8 @@ button {
 }
 
 
-@media (max-width: 1440px) {
+
+@media (max-width: 1439px) {
     .banner figure {   
         bottom: -22px;      
     }
@@ -402,6 +405,7 @@ button {
     .banner-content {
         max-width: 600px;
         left: 0px;
+        
     }
 
     .banner-content h2 {       
