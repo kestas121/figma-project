@@ -1,23 +1,19 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../assets/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/about.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Frontend Mentor | myteam website challenge - About</title>
-  </head>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/about.css" />
 
-  <body>
-      <header>
+  <title>Frontend Mentor | myteam website challenge - About</title>
+</head>
+
+<body>
+  <header>
 
     <div class="container site-header">
       <div class="site-header-left">
@@ -29,21 +25,22 @@
           <a href="../pages/about.html">about</a>
         </nav>
       </div>
-            <a href="../pages/contact.html" class="btn btn-outline">contact us</a>
+      <a href="../pages/contact.html" class="btn btn-outline">contact us</a>
     </div>
-    
 
-      <div class="header-actions">
-        <button class="nav-toggle" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+
+    <div class="header-actions">
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
 
     <div class="container-about">
       <h1 class="h1-small white-text about-text">About</h1>
       <div>
         <span class="section-accent"></span>
-        <p class="about-description body-2 white-text">We help companies build dynamic teams made up of top global talent.
+        <p class="about-description body-2 white-text">We help companies build dynamic teams made up of top global
+          talent.
           Using our network of passionate professionals we drive innovation and
           deliver incredible outcomes. Talented, diverse teams shape the best
           products and experiences. We’ll bring those teams to you.</p>
@@ -52,162 +49,244 @@
     <img src="../assets/bg-pattern-about-1-mobile-nav-1.svg" class="header-donut donut-size" alt="">
   </header>
 
-    <main>
-      <section>
-        <h2>Meet the directors</h2>
-        <ul>
+  <main>
+    <section class="directors">
+      <img src="../assets/bg-pattern-about-2-contact-1.svg" alt="" class="directors-shape-top donut-size">
+      <img src="../assets/bg-pattern-home-4-about-3.svg" alt="" class="directors-shape-bottom">
+
+      <div class="directors-container">
+        <h2 class="h2 white-text director-header">Meet the directors</h2>
+
+        <ul class="directors-list">
           <li>
-            <article>
-              <img src="../assets/avatar-nikita.jpg" alt="Nikita Marks" />
-              <h3>Nikita Marks</h3>
-              <p>Founder &amp; CEO</p>
-              <button>+</button>
-              <blockquote>
+            <article class="director-card">
+              <input type="checkbox" id="card-1" class="card-check">
+              <label for="card-1" class="card-toggle">+</label>
+              <img src="../assets/avatar-nikita.jpg" alt="Nikita Marks" class="director-avatar" />
+              <h3 class="h3 director-name">Nikita Marks</h3>
+              <p class="director-role">Founder &amp; CEO</p>
+              <cite class="h3 director-author">Nikita Marks</cite>
+              <blockquote class="director-quote">
                 "It always amazes me how much talent there is in every corner of
                 the globe."
               </blockquote>
-              <cite>Nikita Marks</cite>
+
+              <div class="director-social-links">
+                <a href="#" aria-label="Twitter">
+                  <span class="icon1-director"></span>
+                </a>
+                <a href="#" aria-label="Facebook">
+                  <span class="icon2-director"></span>
+                </a>
+              </div>
             </article>
           </li>
+
           <li>
-            <article>
-              <img src="../assets/avatar-christian.jpg" alt="Cristian Duncan" />
-              <h3>Cristian Duncan</h3>
-              <p>Co-founder &amp; COO</p>
-              <button>+</button>
-              <blockquote>
-                “Distributed teams required unique processes. You need to
-                approach work in a new way.”
+            <article class="director-card">
+              <input type="checkbox" id="card-2" class="card-check">
+              <label for="card-2" class="card-toggle">+</label>
+              <img src="../assets/avatar-christian.jpg" alt="Cristian Duncan" class="director-avatar" />
+              <h3 class="h3 director-name">Cristian Duncan</h3>
+              <p class="director-role">Co-founder &amp; COO</p>
+              <cite class="h3 director-author">Cristian Duncan</cite>
+              <blockquote class="director-quote">
+                "Distributed teams required unique processes. You need to
+                approach work in a new way."
               </blockquote>
-              <cite>Cristian Duncan</cite>
+
+              <div class="director-social-links">
+                <a href="#" aria-label="Twitter">
+                  <span class="icon1-director"></span>
+                </a>
+                <a href="#" aria-label="Facebook">
+                  <span class="icon2-director"></span>
+                </a>
+              </div>
             </article>
           </li>
+
           <li>
-            <article>
-              <img src="../assets/avatar-cruz.jpg" alt="Cruz Hamer" />
-              <h3>Cruz Hamer</h3>
-              <p>Co-founder &amp; CTO</p>
-              <button>+</button>
-              <blockquote>
-                “Technology is at the forefront of enabling distributed teams.
-                That's where we come in.”
+            <article class="director-card">
+              <input type="checkbox" id="card-3" class="card-check">
+              <label for="card-3" class="card-toggle">+</label>
+              <img src="../assets/avatar-cruz.jpg" alt="Cruz Hamer" class="director-avatar" />
+              <h3 class="h3 director-name">Cruz Hamer</h3>
+              <p class="director-role">Co-founder &amp; CTO</p>
+              <cite class="h3 director-author">Cruz Hamer</cite>
+              <blockquote class="director-quote">
+                "Technology is at the forefront of enabling distributed teams.
+                That's where we come in."
               </blockquote>
-              <cite>Cruz Hamer</cite>
+
+              <div class="director-social-links">
+                <a href="#" aria-label="Twitter">
+                  <span class="icon1-director"></span>
+                </a>
+                <a href="#" aria-label="Facebook">
+                  <span class="icon2-director"></span>
+                </a>
+              </div>
             </article>
           </li>
+
           <li>
-            <article>
-              <img src="../assets/avatar-drake.jpg" alt="Drake Heaton" />
-              <h3>Drake Heaton</h3>
-              <p>Business Development Lead</p>
-              <button>+</button>
-              <blockquote>
-                “Hiring similar people from similar backgrounds is a surefire
-                way to stunt innovation.”
+            <article class="director-card">
+              <input type="checkbox" id="card-4" class="card-check">
+              <label for="card-4" class="card-toggle">+</label>
+              <img src="../assets/avatar-drake.jpg" alt="Drake Heaton" class="director-avatar" />
+              <h3 class="h3 director-name">Drake Heaton</h3>
+              <p class="director-role">Business Development Lead</p>
+              <cite class="h3 director-author">Drake Heaton</cite>
+              <blockquote class="director-quote">
+                "Hiring similar people from similar backgrounds is a surefire
+                way to stunt innovation."
               </blockquote>
-              <cite>Drake Heaton</cite>
+
+              <div class="director-social-links">
+                <a href="#" aria-label="Twitter">
+                  <span class="icon1-director"></span>
+                </a>
+                <a href="#" aria-label="Facebook">
+                  <span class="icon2-director"></span>
+                </a>
+              </div>
             </article>
           </li>
+
           <li>
-            <article>
-              <img src="../assets/avatar-griffin.jpg" alt="Griffin Wise" />
-              <h3>Griffin Wise</h3>
-              <p>Lead Marketing</p>
-              <button>+</button>
-              <blockquote>
-                “Unique perspectives shape unique products, which is what you
-                need to survive these days.”
+            <article class="director-card">
+              <input type="checkbox" id="card-5" class="card-check">
+              <label for="card-5" class="card-toggle">+</label>
+              <img src="../assets/avatar-griffin.jpg" alt="Griffin Wise" class="director-avatar" />
+              <h3 class="h3 director-name">Griffin Wise</h3>
+              <p class="director-role">Lead Marketing</p>
+              <cite class="h3 director-author">Griffin Wise</cite>
+              <blockquote class="director-quote">
+                "Unique perspectives shape unique products, which is what you
+                need to survive these days."
               </blockquote>
-              <cite>Griffin Wise</cite>
+
+              <div class="director-social-links">
+                <a href="#" aria-label="Twitter">
+                  <span class="icon1-director"></span>
+                </a>
+                <a href="#" aria-label="Facebook">
+                  <span class="icon2-director"></span>
+                </a>
+              </div>
             </article>
           </li>
+
           <li>
-            <article>
-              <img src="../assets/avatar-aden.jpg" alt="Aden Allan" />
-              <h3>Aden Allan</h3>
-              <p>Head of Talent</p>
-              <button>+</button>
-              <blockquote>
-                “Empowered teams create truly amazing products. Set the north
-                star and let them follow it.”
+            <article class="director-card">
+              <input type="checkbox" id="card-6" class="card-check">
+              <label for="card-6" class="card-toggle">+</label>
+              <img src="../assets/avatar-aden.jpg" alt="Aden Allan" class="director-avatar" />
+              <h3 class="h3 director-name">Aden Allan</h3>
+              <p class="director-role">Head of Talent</p>
+              <cite class="h3 director-author">Aden Allan</cite>
+              <blockquote class="director-quote">
+                "Empowered teams create truly amazing products. Set the north
+                star and let them follow it."
               </blockquote>
-              <cite>Aden Allan</cite>
+
+              <div class="director-social-links">
+                <a href="#" aria-label="Twitter">
+                  <span class="icon1-director"></span>
+                </a>
+                <a href="#" aria-label="Facebook">
+                  <span class="icon2-director"></span>
+                </a>
+              </div>
             </article>
           </li>
         </ul>
-      </section>
-      <section class="about-clients">
-        <figure class="clients-shape donut-size">
-          <img src="../assets/bg-pattern-about-4.svg" alt="" />
-        </figure>
-        <div class="clients-container">
-          <h2 class="h2 white-text">Some of our clients</h2>
-          <ul class="logo-list">
-            <li><img src="../assets/logo-the-verge.png" alt="The Verge" /></li>
-            <li>
-              <img src="../assets/logo-jakarta-post.png" alt="Jakarta Post" />
-            </li>
-            <li>
-              <img src="../assets/logo-the-guardian.png" alt="The Guardian" />
-            </li>
-            <li><img src="../assets/logo-tech-radar.png" alt="Tech Radar" /></li>
-            <li>
-              <img src="../assets/logo-gadgets-now.png" alt="Gadgets Now" />
-            </li>
-          </ul>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      Ready to get started? contact us
-    </main>
-<footer class="footer">
-  <div class="footer-container">
+    <section class="about-clients">
+      <figure class="clients-shape donut-size">
+        <img src="../assets/bg-pattern-about-4.svg" alt="" />
+      </figure>
+      <div class="clients-container">
+        <h2 class="h2 white-text">Some of our clients</h2>
+        <ul class="logo-list">
+          <li><img src="../assets/logo-the-verge.png" alt="The Verge" /></li>
+          <li>
+            <img src="../assets/logo-jakarta-post.png" alt="Jakarta Post" />
+          </li>
+          <li>
+            <img src="../assets/logo-the-guardian.png" alt="The Guardian" />
+          </li>
+          <li><img src="../assets/logo-tech-radar.png" alt="Tech Radar" /></li>
+          <li>
+            <img src="../assets/logo-gadgets-now.png" alt="Gadgets Now" />
+          </li>
+        </ul>
+      </div>
+    </section>
 
-    <!-- Logo and navigation -->
-    <div class="footer-brand">
-      <a href="/" class="footer-logo"><img src="../assets/logo.svg" alt="" srcset=""></a>
+    <section class="banner"> <!-- CTA banner -->
+      <figure>
+        <img src="../assets/bg-pattern-home-6-about-5.svg" alt="" /> <!-- decorative shape -->
+      </figure>
 
-      <nav class="footer-nav h3" aria-label="Footer navigation">
-        <a href="/">home</a>
-        <a href="../pages/about.html">about</a>
-      </nav>
-    </div>
+      <div class="banner-content">
+        <h2>Ready to get started?</h2>
+        <a href="../pages/contact.html" class="btn btn-outline-dark btn-banner">contact us</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
 
-    <!-- Contact information -->
-    <address class="footer-contact body-2">
-      <p>987 Hillcrest Lane</p>
-      <p>Irvine, CA</p>
-      <p>California 92714</p>
-      <p>
-        Call Us:
-        <a href="tel:+19498337432">949-833-7432</a>
-      </p>
-    </address>
+      <!-- Logo and navigation -->
+      <div class="footer-brand">
+        <a href="/" class="footer-logo"><img src="../assets/logo.svg" alt="" srcset=""></a>
 
-    <!-- Social media and copyright -->
-    <div class="footer-right body-2">
-
-      <div class="social-links">
-        <a href="#" aria-label="Facebook">
-          <img src="../assets/icon-facebook.svg" alt="">
-        </a>
-
-        <a href="#" aria-label="Pinterest">
-          <img src="../assets/icon-pinterest.svg" alt="">
-        </a>
-
-        <a href="#" aria-label="Twitter">
-          <img src="../assets/icon-twitter.svg" alt="">
-        </a>
+        <nav class="footer-nav h3" aria-label="Footer navigation">
+          <a href="/">home</a>
+          <a href="../pages/about.html">about</a>
+        </nav>
       </div>
 
-      <p class="copyright">
-        Copyright 2020. All Rights Reserved
-      </p>
+      <!-- Contact information -->
+      <address class="footer-contact body-2">
+        <p>987 Hillcrest Lane</p>
+        <p>Irvine, CA</p>
+        <p>California 92714</p>
+        <p>
+          Call Us:
+          <a href="tel:+19498337432">949-833-7432</a>
+        </p>
+      </address>
+
+      <!-- Social media and copyright -->
+      <div class="footer-right body-2">
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">
+            <img src="../assets/icon-facebook.svg" alt="">
+          </a>
+
+          <a href="#" aria-label="Pinterest">
+            <img src="../assets/icon-pinterest.svg" alt="">
+          </a>
+
+          <a href="#" aria-label="Twitter">
+            <img src="../assets/icon-twitter.svg" alt="">
+          </a>
+        </div>
+
+        <p class="copyright">
+          Copyright 2020. All Rights Reserved
+        </p>
+
+      </div>
 
     </div>
+  </footer>
+</body>
 
-  </div>
-</footer>
-  </body>
 </html>
