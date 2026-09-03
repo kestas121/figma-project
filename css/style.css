@@ -386,14 +386,9 @@ button {
 /* ----Not yet converted---- */
 /* Delete a selector from here when that section gets its own breakpoints. */
 
-.testimonials-section,
 .banner,
 .footer {
     min-width: 1440px;
-}
-
-.testimonials-section .container {
-    width: 1110px;
 }
 
 /* ----Tablet (768px frame)---- */

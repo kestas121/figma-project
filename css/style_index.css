@@ -294,4 +294,35 @@
     top: 0;
     bottom: auto;
   }
+
+  /* ---- Team section (1199px tall in the tablet frame) ---- */
+
+  .testimonials-section {
+    padding-block: 100px;
+  }
+
+  /* Same 573px inset as the entry section, not the header's 689px */
+  .testimonials-section .container {
+    width: min(573px, calc(100% - 78px));
+  }
+
+  /* Heading keeps its 48px/48px size and just fills the narrower column */
+  .testimonials-title {
+    width: auto;
+  }
+
+  /* Cards stack instead of sitting three across */
+  .testimonial-list {
+    grid-template-columns: 1fr;
+    row-gap: 48px;
+    margin-top: 48px;
+  }
+
+  .testimonial-name {
+    margin-top: 16px;
+  }
+
+  .testimonial-avatar {
+    margin-top: 16px;
+  }
 }
