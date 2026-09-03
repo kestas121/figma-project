@@ -428,7 +428,9 @@ button {
     }
 /*-----CTA banner-----END */
 
-/*-----Global Footer -----START */
+    /* -----CTA banner-----END */
+
+    /* -----Global Footer Tablet-----START */
     .footer-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -465,8 +467,7 @@ button {
         justify-content: space-between;
     }
 
-    /* -----Global Footer -----END */
-
+    /* -----Global Footer Tablet -----END */
 }
 /* RESPONSIVE start --------------------------------------------------------
    The page is being converted to tablet one section at a time. Sections
@@ -513,5 +514,41 @@ button {
         /* color:aqua; */
     }
 
+    /* -----Global Footer Mobile -----START */
+    .footer {
+        height: 432px;
+    }
+    .footer-container {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* background-color: aqua; */
+    }
 
+    .footer-brand {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-contact {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-right {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .copyright {
+        margin-top: 16px;
+    }
+
+    /* -----Global Footer Mobile -----END */
 }
