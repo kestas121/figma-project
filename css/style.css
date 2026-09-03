@@ -447,6 +447,6 @@ button {
 @media (max-width: 768px) {
 
     .banner {
-        background-color: red;
+        /* background-color: red; */
     }
 }
