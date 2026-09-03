@@ -81,9 +81,9 @@
 
 /* FOOTER start ------------------------------------------------- */
 
-/* html {
-    overflow-y: hidden;
-} */
+html {
+    /* overflow-y: hidden; */
+}
 
 .footer {
     background-color: var(--color-dark-green);
@@ -398,25 +398,23 @@ button {
 
 
 @media (max-width: 1439px) {
-    .banner figure {   
-        bottom: -22px;      
+    .banner figure {
+        bottom: -22px;
     }
 
     .banner-content {
-        max-width: 600px;
-        left: 0px;
-        
+        max-width: 573px;
     }
 
-    .banner-content h2 {       
+    .banner-content h2 {
         font-size: 32px;
         line-height: 32px;
-    }    
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .banner {
-        background-color: red;
+        /* background-color: red; */
     }
 }
 
