@@ -314,6 +314,11 @@
     letter-spacing: -0.33px;
   }
 
+   /* Keeps "success stories." together on its own third line */
+  .testimonials-title .highlight-blue {
+    display: block;
+  }
+
   /* Cards stack instead of sitting three across */
   .testimonial-list {
     grid-template-columns: 1fr;
