@@ -30,7 +30,6 @@ header {
   margin-top: 120px;
   margin-bottom: 120px;
   margin-inline: auto;
-  padding: 0 24px;
   display: grid;
   grid-template-columns: 350px 730px;
   gap: 30px;
@@ -40,15 +39,17 @@ header {
 .about-text {
     width: 350px;
     height: 100px;
+    align-content: center;
 }
 
 .about-description {
     text-align: left;
     width: 730px;
-    height: 156px;
+    height: 112px;
 }
 
 .section-accent {
+    align-items: start;
     margin-bottom: 40px;
 }
 
@@ -285,7 +286,7 @@ header {
 /* Clients Section */
 
 .h2 {
-    margin: 0 0 48px;
+    margin-bottom: 64px;
     text-align: center;
 }
 
@@ -297,27 +298,27 @@ header {
 }
 
 .clients-container {
-    position: relative;
-    max-width: 1110px;
-    margin: 0 auto;
-    padding-left: 115px;
-    padding-right: 115px;
-    padding-bottom: 140px;
-    padding-top: 140px;
+    position: absolute;
+    width: 1110px;
     height: 157px;
+    margin-left: 165px;
+    margin-right: 165px;
+    margin-top: 140px;
+    margin-bottom: 140px;
 
 }
 
 .logo-list {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 32px;
+    grid-template-columns: 165px 184px 180px 165px 98px;
+    gap: 80px;
     align-items: center;
+    height: 45px;
 }
 
 .logo-list img {
-    width: 100%;
+    width: auto;
     height: auto;
 }
 
@@ -327,7 +328,11 @@ header {
     left: 0;
 }
 
-
+.logo-1 { translate: 0 -3px; }
+.logo-2 { translate: 0 -5px; }
+.logo-3 { translate: 0 -3px; }
+.logo-4 { translate: 0 -3px; }
+.logo-5 { translate: 0 0px; }
 
 /* OVERRIDES */
 .director-header {
