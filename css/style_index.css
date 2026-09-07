@@ -245,6 +245,8 @@
     width: 457px;
     max-width: 100%;
     margin: 24px auto 0;
+    font-size: 15px;
+    line-height: 28px;
   }
 
   /* The left ring is not in the tablet frame */
