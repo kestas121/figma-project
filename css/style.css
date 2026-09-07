@@ -510,7 +510,7 @@ button {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1439px) {
 
     /* -----CTA banner Mobile-----START */
     .banner {
@@ -600,4 +600,17 @@ button {
     }
 
     /* -----Global Footer Mobile -----END */
+}
+    .container {
+        width: min(689px, calc(100% - 78px));
+    }
+
+    .site-header-left {
+        gap: 48px;
+    }
+
+    .logo img {
+        width: 128px;
+        height: 32px;
+    }
 }
