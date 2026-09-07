@@ -516,6 +516,7 @@ button {
     .banner {
         /* background-color: red; */
         /* color:aqua; */
+        height: 302px;
     }
 
     .banner-content {
@@ -528,6 +529,10 @@ button {
     .banner-content h2 {
         text-align: center;
         margin-bottom: 24px;
+        width: 327px;
+    } 
+    .banner-content a {
+        margin-left: 5px;
     }
 
     /* -----CTA banner Mobile-----END */
