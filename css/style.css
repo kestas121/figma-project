@@ -393,7 +393,18 @@ button {
 
 @media (max-width: 1439px) {
     .banner figure {   
-        bottom: -22px;      
+        bottom: -22px;  
+    }
+
+     .banner-content {
+        max-width: 573px;
+    }
+
+    .banner-content h2 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+}
 /* RESPONSIVE start --------------------------------------------------------
    The page is being converted to tablet one section at a time. Sections
    listed below are still desktop-only: they are pinned to the 1440px layout
@@ -426,14 +437,7 @@ button {
         width: min(689px, calc(100% - 78px));
     }
 
-    .banner-content {
-        max-width: 573px;
-    }
-
-    .banner-content h2 {
-        font-size: 32px;
-        line-height: 32px;
-    }
+   
 }
 
 @media (max-width: 767px) {
