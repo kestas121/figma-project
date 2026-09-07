@@ -506,12 +506,18 @@ button {
    
 
 
-@media (max-width: 768px) {
+@media (max-width: 1439px) {
 
-    .banner {
-        /* background-color: red; */
-        /* color:aqua; */
+    .container {
+        width: min(689px, calc(100% - 78px));
     }
 
+    .site-header-left {
+        gap: 48px;
+    }
 
+    .logo img {
+        width: 128px;
+        height: 32px;
+    }
 }

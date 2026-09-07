@@ -215,7 +215,7 @@
    header sits inside it. The sections below are still pinned to
    the desktop layout by the responsive block in style.css.
    ========================================================= */
-@media (max-width: 1109px) {
+@media (max-width: 1439px) {
 
   /* Header moves to y=64 and the section stays 700px tall.
      64 + 48 header + 112 = 224, where the heading starts. */
@@ -309,6 +309,9 @@
   /* Heading keeps its 48px/48px size and just fills the narrower column */
   .testimonials-title {
     width: auto;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.33px;
   }
 
   /* Cards stack instead of sitting three across */
