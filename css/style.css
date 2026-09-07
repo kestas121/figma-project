@@ -403,29 +403,41 @@ button {
     border: none;
 }
 
+/* ----Tablet (768px frame)---- */
 
 @media (max-width: 1439px) {
-    .banner figure {
-        bottom: -22px;
+
+    /* ----Page shell + header---- */
+    /* Container narrows to 689px (39px margins), logo drops to 128x32,
+       and the gap to the nav closes from 80px to 48px. */
+
+    .container {
+        width: min(689px, calc(100% - 78px));
+    }
+
+    .site-header-left {
+        gap: 48px;
+    }
+
+    .logo img {
+        width: 128px;
+        height: 32px;
     }
 
     .banner-content {
         max-width: 573px;
-    }
-
-    .banner-content h2 {
-        font-size: 32px;
-        line-height: 32px;
-    }
-
-    .banner-content {
-        max-width: 600px;
         left: 0px;
+    /* ----CTA banner---- */
+
+    .banner figure {
+        bottom: -22px;
     }
 
+ 
     .banner-content h2 {
         font-size: 32px;
         line-height: 32px;
+        letter-spacing: -0.33px;
     }
 
     /*-----CTA banner-----END */
@@ -433,8 +445,13 @@ button {
     /* -----CTA banner-----END */
 
     /* -----Global Footer Tablet-----START */
+    /* ----Footer (271px tall in the tablet frame)---- */
+    /* Two rows: brand + address, then socials + copyright across the full
+       width. Row heights come straight from the frame. */
+
     .footer-container {
-        display: grid;
+        width: min(689px, calc(100% - 78px));
+        margin-inline: auto;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 102px 25px;
         row-gap: 32px;
@@ -445,13 +462,17 @@ button {
         grid-row: 1;
     }
 
+    .footer-logo img {
+        width: 96px;
+        height: auto;
+    }
+
     .footer-nav {
         font-size: 15px;
         line-height: 25px;
-        margin-top: 45px;
+        margin-top: 53px;
         gap: 26px;
     }
-
 
     .footer-contact {
         grid-column: 2;
@@ -612,5 +633,8 @@ button {
     .logo img {
         width: 128px;
         height: 32px;
+    }
+    .copyright {
+        margin: 0;
     }
 }
