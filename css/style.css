@@ -424,16 +424,16 @@ button {
         height: 32px;
     }
 
+    /* ----CTA banner---- */
     .banner-content {
         max-width: 573px;
         left: 0px;
-    /* ----CTA banner---- */
+    }
 
     .banner figure {
         bottom: -22px;
     }
 
- 
     .banner-content h2 {
         font-size: 32px;
         line-height: 32px;
@@ -526,17 +526,11 @@ button {
    gap itself and the button are unchanged from desktop. */
 
 
-
-
-
-
-
-@media (max-width: 1439px) {
+@media (max-width: 767px) {
 
     /* -----CTA banner Mobile-----START */
     .banner {
         /* background-color: red; */
-        /* color:aqua; */
         height: 302px;
     }
 
@@ -551,7 +545,8 @@ button {
         text-align: center;
         margin-bottom: 24px;
         width: 327px;
-    } 
+    }
+
     .banner-content a {
         margin-left: 5px;
     }
@@ -569,7 +564,6 @@ button {
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* background-color: aqua; */
         gap: 23px;
     }
 
@@ -599,8 +593,6 @@ button {
         justify-content: center;
         align-items: center;
         margin-left: 5px;
- 
-
     }
 
     .footer-right {
@@ -613,7 +605,6 @@ button {
     .social-links {
         margin-top: 20px;
         padding-left: 10px;
-
     }
 
     .copyright {
@@ -634,6 +625,7 @@ button {
         width: 128px;
         height: 32px;
     }
+
     .copyright {
         margin: 0;
     }
