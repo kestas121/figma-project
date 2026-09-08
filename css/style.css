@@ -442,8 +442,6 @@ button {
 
     /*-----CTA banner-----END */
 
-    /* -----CTA banner-----END */
-
     /* -----Global Footer Tablet-----START */
     /* ----Footer (271px tall in the tablet frame)---- */
     /* Two rows: brand + address, then socials + copyright across the full
@@ -500,25 +498,6 @@ button {
    horizontal scrollbar under 1440px — it disappears once the last selector
    is removed from this block.
    ------------------------------------------------------------------------ */
-
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-/* 
-.testimonials-section,
-.banner,
-.footer {
-    min-width: 1440px;
-}
-
-.testimonials-section .container {
-    width: 1110px;
-} */
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
 
 /* ----Tablet (768px frame)---- */
 /* Header. The container narrows to 689px (39px side margins), the logo
@@ -614,19 +593,117 @@ button {
     /* -----Global Footer Mobile -----END */
 
     .container {
-        width: min(689px, calc(100% - 78px));
+        width: min(327px, calc(100% - 48px));
     }
 
-    .site-header-left {
-        gap: 48px;
-    }
-
-    .logo img {
-        width: 128px;
+    .site-header {
         height: 32px;
     }
 
-    .copyright {
-        margin: 0;
+    /* Nav and contact button move into the slide-in panel */
+    .main-nav,
+    .site-header > .btn {
+        display: none;
+    }
+}
+
+/* ===== Mobile burger menu ===================================== */
+
+.menu-checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip-path: inset(50%);
+}
+
+.menu-overlay,
+.mobile-menu,
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle {
+    width: 20px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.nav-toggle img {
+    width: 20px;
+    height: 17px;
+}
+
+.menu-close img {
+    width: 18px;
+    height: 17px;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 50;
+    width: 255px;
+    height: 100%;
+    padding: 112px 48px 0;
+    background: var(--color-police-blue);
+    overflow: hidden;
+}
+
+.menu-close {
+    position: absolute;
+    top: 56px;
+    right: 24px;
+    width: 18px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    font-size: var(--text-h3);
+    line-height: var(--line-h3);
+}
+
+.mobile-nav .btn {
+    width: 159px;
+    margin-top: 12px;
+}
+
+.mobile-menu-shape {
+    position: absolute;
+    right: -100px;
+    bottom: 0;
+    width: 200px;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+
+    .site-header .nav-toggle {
+        display: block;
+    }
+
+    .menu-checkbox:checked ~ .menu-overlay,
+    .menu-checkbox:checked ~ .mobile-menu {
+        display: block;
+    }
+
+    html:has(.menu-checkbox:checked) {
+        overflow: hidden;
     }
 }

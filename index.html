@@ -19,6 +19,30 @@
 
 <body>
 
+  <!-- ================= MOBILE MENU =================
+       Holds the open/closed state. The checkbox, the overlay and the panel
+       must stay direct children of <body> and siblings of each other —
+       the CSS reaches them with the ~ sibling combinator. -->
+
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+
+  <label for="menu-toggle" class="menu-overlay" aria-hidden="true"></label>
+
+  <aside class="mobile-menu">
+    <label for="menu-toggle" class="menu-close">
+      <img src="assets/icon-close.svg" alt="Close menu" />
+    </label>
+
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="index.html">home</a>
+      <a href="pages/about.html">about</a>
+      <a href="pages/contact.html" class="btn btn-outline">contact us</a>
+    </nav>
+
+    <img class="mobile-menu-shape" aria-hidden="true"
+         src="assets/bg-pattern-about-1-mobile-nav-1.svg" alt="" />
+  </aside>
+
   <!-- ================= HERO ================= -->
   <header class="hero">
     <div class="shape-layer" aria-hidden="true">
@@ -38,6 +62,12 @@
       </div>
 
       <a href="pages/contact.html" class="btn btn-outline">contact us</a>
+
+      <!-- Hamburger. Lives here, NOT inside .mobile-menu — that panel is
+           hidden until the checkbox is checked. Only shows under 768px. -->
+      <label for="menu-toggle" class="nav-toggle">
+        <img src="assets/icon-hamburger.svg" alt="Open menu" />
+      </label>
     </div>
 
     <div class="container hero-grid">
@@ -153,32 +183,33 @@
       </div>
     </section>
 
-    <section class="banner"> <!-- CTA banner -->
+    <!-- ================= CTA banner ================= -->
+    <section class="banner">
       <figure>
-        <img src="assets/bg-pattern-home-6-about-5.svg" alt="" /> 
+        <img src="assets/bg-pattern-home-6-about-5.svg" alt="" />
       </figure>
+
       <div class="banner-content">
-      <h2>Ready to get started?</h2>
-      <a href="pages/contact.html" class="btn btn-outline-dark btn-banner">contact us</a>
+        <h2>Ready to get started?</h2>
+        <a href="pages/contact.html" class="btn btn-outline-dark btn-banner">contact us</a>
       </div>
     </section>
 
-
-   
   </main>
 
+  <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="footer-container">
 
-    <!-- Logo and navigation -->
-    <div class="footer-brand">
-      <a href="index.html" class="footer-logo"><img src="assets/logo.svg" alt="" srcset=""></a>
+      <!-- Logo and navigation -->
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo"><img src="assets/logo.svg" alt="myteam"></a>
 
-      <nav class="footer-nav h3" aria-label="Footer navigation">
-        <a href="index.html">home</a>
-        <a href="pages/about.html">about</a>
-      </nav>
-    </div>
+        <nav class="footer-nav h3" aria-label="Footer navigation">
+          <a href="index.html">home</a>
+          <a href="pages/about.html">about</a>
+        </nav>
+      </div>
 
       <!-- Contact information -->
       <address class="footer-contact body-2">
