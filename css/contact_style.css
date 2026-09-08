@@ -23,11 +23,9 @@ header {
     display: flex;
     justify-content: center;
     background-color: var(--color-midnight-green);
-    /* width: 1440px; */
     min-height: 548px;
     width: 100%;
     margin: 0 auto;
-    /* padding-top: 129px; */
 }
 
 
@@ -39,10 +37,6 @@ header {
     height: 200px;
     overflow: hidden;
     margin: 0;
-    /* margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    */
 }
 
 .half-donut img {
