@@ -384,4 +384,62 @@ header {
         font-size: var(--text-body-2);  
     }
 
+    /* DIRECTORS */
+
+    .directors-list {
+        grid-template-columns: repeat(2, 281px);
+        gap: 48px 11px;
+        margin: 0 auto;
+        margin-top: 55px;
+        margin-bottom: 81px;
+
+    }
+
+    .director-header {
+        margin: 0 auto;
+        height: 32px;
+        width: 445px;
+        margin-top: -6px;
+    }
+
+    .director-card {
+        height: 253px;
+        width: 281px;
+        margin-bottom: 47px;
+    }
+
+    .directors-container {
+        padding-top: 1px;
+        padding-bottom: 0px;
+        margin-top: 98px;
+    }
+
+    .card-toggle {
+        position: absolute;
+        bottom: -28px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .h2 {
+        font-size: 32px;
+    }
+
+    .director-quote {
+        width: 233px;
+        height: 75px;
+    }
+
+    .director-avatar {
+        width: 99px;
+        height: 97px;
+    }
+
+    .director-role {
+        width: 98%;
+    }
+
+    /* CLIENTS SECTION */
 }
