@@ -287,6 +287,7 @@ button {
 
     header {
         height: 160px;
+        padding-top: 0px;
     }
 
     .contact {
@@ -318,7 +319,7 @@ button {
         line-height: 40px;
         letter-spacing: 0px;
         text-align: center;
-        margin-top: 0px;
+        margin-top: 10px;
         margin-right: 12px;
     }
 
