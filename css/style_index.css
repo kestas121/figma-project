@@ -336,3 +336,33 @@
     margin-top: 16px;
   }
 }
+
+/* =========================================================
+   MOBILE  (375px frame)
+   ========================================================= */
+@media (max-width: 767px) {
+
+  /* Hero is 567px tall. Header at y=48, heading at y=160,
+     lede at y=258, so 48 + 32 header + 80 = 160. */
+  .hero {
+    padding-top: 48px;
+    padding-bottom: 197px;
+  }
+
+  .hero-grid {
+    padding-top: 80px;
+  }
+
+  .hero-title {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.42px;
+  }
+
+  .hero-lede {
+    width: auto;
+    margin-top: 18px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
