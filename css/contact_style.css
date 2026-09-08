@@ -276,6 +276,87 @@ button {
         margin-left: 14px;
     }
 
+}
+
+@media (max-width: 767px) {
+
+    header {
+        background-color: aqua;
+        height: 160px;
+        width: 100%;
+        /* padding-top: 63px; */
+    }
+
+    .contact {
+        height: 982px;
+        margin-bottom: 0px;
+    }
+
+    .half-donut {
+        display: none;
+    }
+
+    .half-pink-donut img {
+        transform: translateY(112.5px);
+    }
+
+    .contact-content {
+        /* width: 327px; */
+        gap: 54px;
+    }
+
+    .contact-content-intro {
+        width: 327px;
+    }
+
+    .contact-content-intro h1 {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: 0px;
+        text-align: center;
+        margin-top: 0px;
+        margin-right: 12px;
+    }
+
+    .contact-content-intro h2 {
+        margin-top: 15px;
+        margin-bottom: 12px;
+        margin-right: 12px;
+
+    }
+
+    .contact-card {
+        /* gap: 22px; */
+       
+    }
+
+    .contact-card figure img {
+        margin-top: 5px;
+        width: auto;
+        max-width: none;
+    }
+
+    .person-img {
+        margin-left: 1px;
+        margin-top: 3px;
+
+    }
+
+    .contact-content-form-container {
+        width: 327px;
+        /* margin-left: 14px; */
+    }
+
+    .contact-content-intro ul {
+        margin-left: 2px;
+    }
+
+    .contact-content-intro ul li {
+         margin-top: 24px;
+    }
+
+
 
 
 }
