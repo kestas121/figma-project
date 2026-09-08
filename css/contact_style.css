@@ -150,7 +150,7 @@ header {
 }
 
 .contact-form input,
-textarea {
+.contact-form textarea {
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
@@ -169,6 +169,9 @@ textarea {
     height: 42px;
 }
 
+.contact-form textarea {
+    height: 84px;
+}
 
 .submit-btn {
     padding: 12px;
@@ -281,10 +284,8 @@ button {
 @media (max-width: 767px) {
 
     header {
-        background-color: aqua;
         height: 160px;
-        width: 100%;
-        /* padding-top: 63px; */
+        width: 100%;  
     }
 
     .contact {
@@ -301,7 +302,6 @@ button {
     }
 
     .contact-content {
-        /* width: 327px; */
         gap: 54px;
     }
 
@@ -323,12 +323,6 @@ button {
         margin-top: 15px;
         margin-bottom: 12px;
         margin-right: 12px;
-
-    }
-
-    .contact-card {
-        /* gap: 22px; */
-       
     }
 
     .contact-card figure img {
@@ -340,12 +334,6 @@ button {
     .person-img {
         margin-left: 1px;
         margin-top: 3px;
-
-    }
-
-    .contact-content-form-container {
-        width: 327px;
-        /* margin-left: 14px; */
     }
 
     .contact-content-intro ul {
@@ -353,10 +341,22 @@ button {
     }
 
     .contact-content-intro ul li {
-         margin-top: 24px;
+        margin-top: 24px;
     }
 
+    .contact-content-form-container {
+        width: 327px;
+        margin-top: 6px;
+        margin-left: 3px;
+    }
 
+    .contact-form input {
+        padding-left: 13px;
+        padding-bottom: 14px;
+    }
 
-
+    .contact-form textarea {
+        padding-left: 14px;
+        padding-top: 0px;
+    }
 }
