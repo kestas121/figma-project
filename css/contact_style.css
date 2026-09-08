@@ -9,17 +9,25 @@ body {
     /* min-width: 1440px; */
 }
 
+header {
+    /* background-color: var(--color-midnight-green); */
+    /* position: relative; */
+    /* overflow: hidden; */
+    height: 241px;
+    width: 100%;
+    padding-top: 73px;
+}
+
 .contact {
     position: relative;
     display: flex;
     justify-content: center;
     background-color: var(--color-midnight-green);
     /* width: 1440px; */
-    min-height: 658px;
+    min-height: 548px;
     width: 100%;
     margin: 0 auto;
-    padding-top: 129px;
-
+    /* padding-top: 129px; */
 }
 
 
