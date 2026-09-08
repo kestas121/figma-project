@@ -338,3 +338,50 @@ header {
 .director-header {
     margin-bottom: 64px;
 }
+
+@media (max-width: 1439px) {
+
+    .site-header {
+        margin-top: -9px;
+    }
+
+    header {
+        height: 556px;
+    }
+
+    .container-about {
+        width: 683px;
+        height: 220px;
+        margin-left: 0 auto;
+        margin-right: 0 auto;
+        margin-bottom: 112px;
+        margin-top: 112px;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        position: relative;
+        left: 2px;
+    }
+
+    .section-accent {
+        display: none;
+    }
+
+    .about-text {
+        height: 56px;
+        width: 683px;
+        text-align: center;
+
+    }
+
+    .about-description {
+        width: 457px;
+        height: 140px;
+        text-align: center;
+        margin-left: 110px;
+        margin-right: 116px;
+        margin-top: 24px;
+        font-size: var(--text-body-2);  
+    }
+
+}
