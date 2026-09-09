@@ -7,7 +7,14 @@
 body {
     /* margin: 0 auto; */
     /* min-width: 1440px; */
+
+    /* outline: 1px solid rgb(236, 33, 33); */
 }
+
+/* body > * {
+  border: 2px solid red;
+} */
+
 
 header {
     /* background-color: var(--color-midnight-green); */
@@ -17,6 +24,7 @@ header {
     width: 100%;
     padding-top: 73px;
 }
+
 
 .contact {
     position: relative;
@@ -232,7 +240,7 @@ button {
         padding-top: 63px;
     }
 
-     /* .contact-us-btn {
+    /* .contact-us-btn {
         margin-right: 0px;
          margin-left: 200px; 
     }  */
@@ -286,8 +294,8 @@ button {
 @media (max-width: 767px) {
 
     header {
-        height: 160px;
-        padding-top: 0px;
+        height: 150px;
+        padding-top: 45px;
     }
 
     .contact {
@@ -307,7 +315,7 @@ button {
         gap: 54px;
     }
 
-   
+
     .contact-content-intro,
     .contact-content-form-container {
         width: min(327px, calc(100vw - 32px));
@@ -363,5 +371,4 @@ button {
         padding-top: 0px;
     }
 
-  }
-
+}
