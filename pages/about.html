@@ -13,6 +13,26 @@
 </head>
 
 <body>
+
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+
+  <label for="menu-toggle" class="menu-overlay" aria-hidden="true"></label>
+
+  <aside class="mobile-menu">
+    <label for="menu-toggle" class="menu-close">
+      <img src="../assets/icon-close.svg" alt="Close menu" />
+    </label>
+
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="../index.html">home</a>
+      <a href="/pages/about.html">about</a>
+      <a href="/pages/contact.html" class="btn btn-outline">contact us</a>
+    </nav>
+
+    <img class="mobile-menu-shape" aria-hidden="true"
+         src="../assets/bg-pattern-about-1-mobile-nav-1.svg" alt="" />
+  </aside>
+
   <header>
 
     <div class="container site-header">
@@ -26,6 +46,9 @@
         </nav>
       </div>
       <a href="../pages/contact.html" class="btn btn-outline">contact us</a>
+      <label for="menu-toggle" class="nav-toggle">
+        <img src="../assets/icon-hamburger.svg" alt="Open menu" />
+      </label>
     </div>
 
 
