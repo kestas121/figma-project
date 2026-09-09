@@ -408,7 +408,8 @@
  /* ---- Team section (1410px tall in the mobile frame) ---- */
 
   .testimonials-section {
-    padding-block: 140px;
+    padding-top: 140px;
+    padding-bottom: 164px;
   }
 
   .testimonials-section .container {
@@ -418,5 +419,9 @@
   /* Tablet forces this onto its own line; mobile lets it flow */
   .testimonials-title .highlight-blue {
     display: inline;
+  }
+
+  .testimonial-avatar {
+    margin-top: 18px;
   }
 }
