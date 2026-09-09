@@ -399,5 +399,18 @@
   .value-prop-text {
     margin-top: 8px;
   }
+ /* ---- Team section (1410px tall in the mobile frame) ---- */
 
+  .testimonials-section {
+    padding-block: 140px;
+  }
+
+  .testimonials-section .container {
+    width: min(327px, calc(100% - 48px));
+  }
+  
+  /* Tablet forces this onto its own line; mobile lets it flow */
+  .testimonials-title .highlight-blue {
+    display: inline;
+  }
 }
