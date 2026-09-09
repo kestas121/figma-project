@@ -112,11 +112,13 @@
 /* The disc behind the glyph is baked into the SVG, so nothing is drawn here */
 .value-prop-icon {
   width: 72px;
+  height: 72px;
 }
 
 .value-prop-icon img {
   width: 72px;
-  height: auto;
+  height: 72px;
+  object-fit: contain;
 }
 
 .value-prop-heading {
@@ -381,8 +383,12 @@
     width: 240px;
   }
 
+  .value-props-grid {
+    row-gap: 56px;
+  }
+
   .value-prop-list {
-    padding-top: 56px;
+    padding-top: 0;
     gap: 48px;
   }
 
