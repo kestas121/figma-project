@@ -294,18 +294,15 @@ header {
     background-color: var(--color-sacramento-state-green);
     height: 437px;
     position: relative;
-
+    overflow: hidden;
 }
 
 .clients-container {
-    position: absolute;
     width: 1110px;
     height: 157px;
-    margin-left: 165px;
-    margin-right: 165px;
     margin-top: 140px;
     margin-bottom: 140px;
-
+    margin-inline: auto;
 }
 
 .logo-list {
@@ -442,4 +439,39 @@ header {
     }
 
     /* CLIENTS SECTION */
+
+    .clients-container {
+    width: 689px;
+    height: 108px;
+    margin: 100px auto;
+}
+
+
+    .about-clients {
+        overflow: hidden;
+        height: 308px;
+    }
+
+    .clients-shape {
+        top: -100px;
+    }
+
+    .logo-list {
+        grid-template-columns:103px 114px 112px 103px 61px;
+        margin: 0;
+        height: 28px;
+        gap: 49px;
+    }
+
+    .clients-header {
+        margin-bottom: 48px;
+        height: 32px;
+        translate: -1px -7px;
+    }
+
+    .logo-1 { translate: -1px -1px; }
+    .logo-2 { translate: -1px -3px; }
+    .logo-3 { translate: -1px -1px; }
+    .logo-4 { translate: -1px -1px; }
+    .logo-5 { translate: -1px 1px; }
 }
