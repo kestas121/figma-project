@@ -12,6 +12,26 @@
 
 <body>
 
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+
+  <label for="menu-toggle" class="menu-overlay" aria-hidden="true"></label>
+
+  <aside class="mobile-menu">
+    <label for="menu-toggle" class="menu-close">
+      <img src="../assets/icon-close.svg" alt="Close menu" />
+    </label>
+
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="../index.html">home</a>
+      <a href="/pages/about.html">about</a>
+      <a href="/pages/contact.html" class="btn btn-outline">contact us</a>
+    </nav>
+
+    <img class="mobile-menu-shape" aria-hidden="true"
+         src="../assets/bg-pattern-about-1-mobile-nav-1.svg" alt="" />
+  </aside>
+
+<!-- <header class="hero"> -->
   <header>
     <div class="container site-header">
       <div class="site-header-left">
@@ -23,7 +43,14 @@
           <a href="/pages/about.html">about</a>
         </nav>
       </div>
-      <!-- <a href="pages/contact.html" class="btn btn-outline contact-us-btn">contact us</a> -->
+
+      <a href="pages/contact.html" class="btn btn-outline">contact us</a>
+
+      <!-- Hamburger. Lives here, NOT inside .mobile-menu — that panel is
+           hidden until the checkbox is checked. Only shows under 768px. -->
+      <label for="menu-toggle" class="nav-toggle">
+        <img src="../assets/icon-hamburger.svg" alt="Open menu" />
+      </label>
     </div>
   </header>
 
@@ -102,6 +129,7 @@
     <div class="footer-container">
 
       <!-- Logo and navigation -->
+       
       <div class="footer-brand">
         <a href="/" class="footer-logo"><img src="/assets/logo.svg" alt="" srcset=""></a>
 
