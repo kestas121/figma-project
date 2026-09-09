@@ -365,4 +365,39 @@
     font-size: 15px;
     line-height: 25px;
   }
+/* ---- Entry section (1073px tall in the mobile frame) ---- */
+
+  .value-props-section {
+    padding-block: 64px;
+  }
+
+  .value-props-section .container {
+    width: min(327px, calc(100% - 48px));
+  }
+
+  /* Accent bar and heading stay left-aligned; the heading narrows to 240px
+     and wraps to five lines. */
+  .value-props-title {
+    width: 240px;
+  }
+
+  .value-prop-list {
+    padding-top: 56px;
+    gap: 48px;
+  }
+
+  /* Icon moves above the text and both centre */
+  .value-prop {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .value-prop-icon {
+    margin: 0 auto 16px;
+  }
+
+  .value-prop-text {
+    margin-top: 8px;
+  }
+
 }
