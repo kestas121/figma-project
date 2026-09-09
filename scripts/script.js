@@ -27,17 +27,18 @@ const validateForm = () => {
 }
 
 requiredFields.forEach((field) => {
+    console.log('pirma kart');
 
     if (!field.value.trim()) {
         submitButton.classList.add('inactive-btn');
     }
     field.addEventListener("blur", () => {
-        const wrapper = field.closest(".field-requirement");
-        console.log('pirma kart');
+        const element = field.closest(".field-requirement");
+
         if (!field.value.trim()) {
-            wrapper.classList.add("error")
+            element.classList.add("error")
         } else {
-            wrapper.classList.remove("error");
+            element.classList.remove("error");
 
         }
         validateForm();
@@ -47,10 +48,10 @@ requiredFields.forEach((field) => {
 
 requiredFields.forEach((field) => {
     field.addEventListener("input", () => {
-        const wrapper = field.closest(".field-requirement");
+        const element = field.closest(".field-requirement");
 
         if (field.value.trim()) {
-            wrapper.classList.remove("error")
+            element.classList.remove("error")
         }
         validateForm();
     });
