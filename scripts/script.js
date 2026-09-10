@@ -4,7 +4,6 @@ const form = document.querySelector(".contact-form");
 const requiredFields = form.querySelectorAll("[required]");
 const submitButton = form.querySelector('[type="submit"]');
 
-
 console.log(requiredFields);
 
 const validateForm = () => {
@@ -24,7 +23,7 @@ const validateForm = () => {
         }
         submitButton.disabled = !formValid;
     })
-}
+};
 
 requiredFields.forEach((field) => {
     console.log('pirma kart');
@@ -34,12 +33,14 @@ requiredFields.forEach((field) => {
     }
     field.addEventListener("blur", () => {
         const element = field.closest(".field-requirement");
-
+        console.log(field);
         if (!field.value.trim()) {
             element.classList.add("error")
+            element.classList.add("required-field")
+
         } else {
             element.classList.remove("error");
-
+            element.classList.remove("required-field")     
         }
         validateForm();
     });
@@ -52,10 +53,12 @@ requiredFields.forEach((field) => {
 
         if (field.value.trim()) {
             element.classList.remove("error")
+            element.classList.remove("required-field")   
         }
         validateForm();
     });
 });
+
 
 form.addEventListener("submit", (event) => {
     if (!validateForm()) {
