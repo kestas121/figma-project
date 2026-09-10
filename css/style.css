@@ -93,7 +93,6 @@ html {
     background-color: var(--color-dark-green);
     color: var(--color-white);
     padding: 48px 0;
-    padding-top: 56px;
 }
 
 .footer address {
@@ -447,6 +446,9 @@ button {
     /* ----Footer (271px tall in the tablet frame)---- */
     /* Two rows: brand + address, then socials + copyright across the full
        width. Row heights come straight from the frame. */
+    .footer {
+        padding-top: 56px;
+    }
 
     .footer-container {
         width: min(689px, calc(100% - 78px));
@@ -603,7 +605,7 @@ button {
 
     /* Nav and contact button move into the slide-in panel */
     .main-nav,
-    .site-header > .btn {
+    .site-header>.btn {
         display: none;
     }
 }
@@ -699,8 +701,8 @@ button {
         display: block;
     }
 
-    .menu-checkbox:checked ~ .menu-overlay,
-    .menu-checkbox:checked ~ .mobile-menu {
+    .menu-checkbox:checked~.menu-overlay,
+    .menu-checkbox:checked~.mobile-menu {
         display: block;
     }
 
