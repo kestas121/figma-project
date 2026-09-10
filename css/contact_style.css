@@ -302,8 +302,11 @@ button {
     } */
 
     .contact {
-        min-height: 983px;
-        margin-bottom: 10px;
+        min-height: 984px;
+        /* margin-bottom: 10px; */
+    }
+    .footer {
+        min-height: 271px;
     }
 
     .contact-content {
