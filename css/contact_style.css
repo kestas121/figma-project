@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px var(--color-midnight-green) inset;
+    -webkit-text-fill-color: var(--color-white);
+
+}
+
 body {
     /* margin: 0 auto; */
     /* min-width: 1440px; */
@@ -11,10 +19,53 @@ body {
     /* outline: 1px solid rgb(236, 33, 33); */
 }
 
-/* body > * {
-  border: 2px solid red;
-} */
 
+.field-requirement {
+    position: relative;
+    margin-top: 24px;
+}
+
+.error-message {
+    display: block;
+    color: var(--color-light-coral);
+    font-family: Livvic;
+
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 100%;
+    letter-spacing: 0.3px;
+    font-style: italic;
+    
+    z-index: 1;
+    padding-top: 10px;
+    padding-left: 14px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.inactive-btn {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.field-requirement.error .error-message {
+    max-height: 20px;
+    opacity: 1;
+}
+
+.field-requirement.error .required-field {
+    border-bottom: 1px solid var(--color-light-coral);
+}
+
+.field-requirement.error .required-field::placeholder {
+    color: var(--color-light-coral);
+    opacity: 0.5;
+}
+.margin-field {
+    margin-top: 15px !important;
+}
 
 header {
     /* background-color: var(--color-midnight-green); */
@@ -31,7 +82,7 @@ header {
     display: flex;
     justify-content: center;
     background-color: var(--color-midnight-green);
-    /* min-height: 548px; */
+    min-height: 548px;
     width: 100%;
     margin: 0 auto;
 }
@@ -143,7 +194,6 @@ header {
     font-weight: var(--font-weight-heading);
 }
 
-
 .contact-content-form-container {
     display: flex;
     flex-direction: column;
@@ -166,11 +216,11 @@ header {
     letter-spacing: -0.12px;
     display: block;
     width: 100%;
-    padding-left: 14px;
-    padding-bottom: 13px;
+    padding-left: 17px;
+    padding-bottom: 15px;
     margin-top: 24px;
     background: transparent;
-    color: #fff;
+    color: var(--color-white);
     border: none;
     border-bottom: 1px solid #aaa;
     outline: none;
@@ -180,6 +230,7 @@ header {
 .contact-form textarea {
     height: 84px;
 }
+
 
 .submit-btn {
     padding: 12px;
@@ -207,7 +258,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-    border-bottom-color: #fff;
+    border-bottom-color: var(--color-white);
 }
 
 .message-field {
@@ -223,7 +274,7 @@ button {
     height: 96px;
     border: none;
     border-radius: 50px;
-    background: #fff;
+    background: var(--color-white);
     color: #004957;
     font-size: 28px;
     font-weight: 700;
@@ -251,8 +302,11 @@ button {
     } */
 
     .contact {
-        min-height: 983px;
-        margin-bottom: 10px;
+        min-height: 984px;
+        /* margin-bottom: 10px; */
+    }
+    .footer {
+        min-height: 271px;
     }
 
     .contact-content {

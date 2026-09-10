@@ -8,11 +8,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="stylesheet" href="../css/contact_style.css">
   <title>Frontend Mentor | myteam website challenge - Contact</title>
+  <script src="../scripts/script.js" defer></script>
 </head>
 
 <body>
 
-    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox">
 
   <label for="menu-toggle" class="menu-overlay" aria-hidden="true"></label>
 
@@ -27,11 +28,10 @@
       <a href="/pages/contact.html" class="btn btn-outline">contact us</a>
     </nav>
 
-    <img class="mobile-menu-shape" aria-hidden="true"
-         src="../assets/bg-pattern-about-1-mobile-nav-1.svg" alt="" />
+    <img class="mobile-menu-shape" aria-hidden="true" src="../assets/bg-pattern-about-1-mobile-nav-1.svg" alt="" />
   </aside>
 
-<!-- <header class="hero"> -->
+  <!-- <header class="hero"> -->
   <header>
     <div class="container site-header">
       <div class="site-header-left">
@@ -99,17 +99,20 @@
         <div class="contact-content-form-container">
 
           <form class="contact-form body-2" action="/pages/contact.html" method="post">
-
+          
             <input type="text" id="name" name="name" placeholder="Name" />
 
-            <input type="email" id="email" name="email" placeholder="Email Address" />
+            <div class="field-requirement">
+              <input class="required-field" type="text" id="email" name="email" placeholder="Email Address" required />
+              <span class="error-message">This field is required</span>
+            </div>
 
-            <input type="company-name" id="company-name" name="company-name" placeholder="Company Name" />
+            <input class="margin-field" type="company-name" id="company-name" name="company-name"placeholder="Company Name" />
 
             <input type="title" id="title" name="title" placeholder="Title" />
 
             <textarea id="message" name="message" placeholder="Message"></textarea>
-            <button type="submit" class="submit-btn body-1">submit</button>
+            <button type="submit" class="submit-btn body-1" disabled>submit</button>
 
           </form>
 
@@ -129,7 +132,7 @@
     <div class="footer-container">
 
       <!-- Logo and navigation -->
-       
+
       <div class="footer-brand">
         <a href="/" class="footer-logo"><img src="/assets/logo.svg" alt="" srcset=""></a>
 
@@ -140,13 +143,13 @@
       </div>
 
       <!-- Contact information -->
-       
+
       <address class="footer-contact body-2">
         <p>987 Hillcrest Lane</p>
         <p>Irvine, CA</p>
         <p>California 92714</p>
         <p>
-          Call Us:
+          Call Us :
           <a href="tel:+19498337432">949-833-7432</a>
         </p>
       </address>
