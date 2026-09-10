@@ -475,3 +475,143 @@ header {
     .logo-4 { translate: -1px -1px; }
     .logo-5 { translate: -1px 1px; }
 }
+
+@media (max-width: 767px) {
+
+    header {
+        min-width: 375px;
+        height: 520px;
+        padding: 0;
+    }
+
+    .site-header {
+        margin-top: 48px;
+        margin-bottom: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container-about {
+        height: 252px;
+        width: 327px;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+    }
+
+    .about-text {
+        font-size: 40px;
+        width: 327px;
+        line-height: 40px;
+    }
+
+    .about-description {
+        margin: 0;
+        margin-top: 16px;
+        height: 196px;
+        width: 327px;
+    }
+
+    .header-donut {
+        bottom: -100px;
+    }
+
+/* DIRECTORS SECTION */
+
+    .directors {
+        min-width: 375px;
+    }
+
+    .directors-shape-top {
+        top: -100px;
+    }
+
+    .directors-container {
+        margin: 0;
+        margin-top: 88px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 88px;
+        width: 327px;
+    }
+
+    .director-header {
+        margin: 0;
+        width: 327px;
+        line-height: 32px;
+        margin-bottom: 48px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .directors-list {
+    grid-template-columns: 327px; 
+    justify-content: center;
+    margin: 0;
+    gap: 24px;
+    }
+
+    .director-card {
+        width: 327px;
+    }
+    
+    .directors-list li {
+        height: 281px;
+    }
+
+    /* CLIENTS */
+
+    .about-clients {
+        min-width: 375px;
+        height: 632px;
+    }
+
+    .clients-shape {
+        left: -100px;
+    }
+
+    .clients-container {
+        margin: 0;
+        margin: 88px auto;
+        height: 456px;
+        width: 327px;
+    }
+
+    .clients-header {
+        margin: 0;
+        line-height: 32px;
+        translate: -1px -1px;
+    }
+
+    .logo-list {
+        grid-template-columns: 162px;
+        grid-template-rows: repeat(5, auto);
+        height: auto;
+        gap: 57px;
+    justify-content: center;
+    margin: 64px auto 88px;
+    }
+
+    .logo-1 { translate: 6px -1px;}
+    .logo-2 { translate: -1px -3px; }
+    .logo-3 { translate: 1px -2px; }
+    .logo-4 { translate: 6px -3px; }
+    .logo-5 { translate: 36px -4px; }
+
+    .logo-list li {
+    height: auto;
+}
+
+.logo-list img {
+    width: auto;
+    height: auto;
+}
+
+img.logo-1 { width: 147px; }
+img.logo-2 { width: 162px; }
+img.logo-3 { width: 159px; }
+img.logo-4 { width: 147px; }
+img.logo-5 { width: 87px; }
+
+}
