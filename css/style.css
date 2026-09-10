@@ -554,15 +554,15 @@ button {
     }
 
     .footer-logo {
-        margin-top: 15px;
-        margin-left: 10px;
+        margin-top: 17px;
+        margin-left: 4px;
         width: 96px;
         height: 24px;
     }
 
     .footer-nav {
         margin-top: 24px;
-        margin-left: 10px;
+        margin-left: 3px;
         gap: 25px;
     }
 
@@ -571,7 +571,7 @@ button {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-left: 5px;
+        margin-left: 1px;
     }
 
     .footer-right {
@@ -582,8 +582,8 @@ button {
     }
 
     .social-links {
-        margin-top: 20px;
-        padding-left: 10px;
+        margin-top: 18px;
+        padding-left: 2px;
     }
 
     .copyright {
