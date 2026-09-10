@@ -112,11 +112,13 @@
 /* The disc behind the glyph is baked into the SVG, so nothing is drawn here */
 .value-prop-icon {
   width: 72px;
+  height: 72px;
 }
 
 .value-prop-icon img {
   width: 72px;
-  height: auto;
+  height: 72px;
+  object-fit: contain;
 }
 
 .value-prop-heading {
@@ -363,6 +365,63 @@
     width: auto;
     margin-top: 18px;
     font-size: 15px;
-    line-height: 25px;
+    line-height: 28px;
+  }
+/* ---- Entry section (1073px tall in the mobile frame) ---- */
+
+  .value-props-section {
+    padding-block: 64px;
+  }
+
+  .value-props-section .container {
+    width: min(327px, calc(100% - 48px));
+  }
+
+  /* Accent bar and heading stay left-aligned; the heading narrows to 240px
+     and wraps to five lines. */
+  .value-props-title {
+    width: 240px;
+  }
+
+  .value-props-grid {
+    row-gap: 56px;
+  }
+
+  .value-prop-list {
+    padding-top: 0;
+    gap: 48px;
+  }
+
+  /* Icon moves above the text and both centre */
+  .value-prop {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .value-prop-icon {
+    margin: 0 auto 16px;
+  }
+
+  .value-prop-text {
+    margin-top: 8px;
+  }
+ /* ---- Team section (1410px tall in the mobile frame) ---- */
+
+  .testimonials-section {
+    padding-top: 140px;
+    padding-bottom: 164px;
+  }
+
+  .testimonials-section .container {
+    width: min(327px, calc(100% - 48px));
+  }
+  
+  /* Tablet forces this onto its own line; mobile lets it flow */
+  .testimonials-title .highlight-blue {
+    display: inline;
+  }
+
+  .testimonial-avatar {
+    margin-top: 18px;
   }
 }
