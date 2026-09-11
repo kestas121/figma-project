@@ -26,7 +26,6 @@ const validateForm = () => {
 };
 
 requiredFields.forEach((field) => {
-    console.log('pirma kart');
 
     if (!field.value.trim()) {
         submitButton.classList.add('inactive-btn');
@@ -62,6 +61,6 @@ requiredFields.forEach((field) => {
 
 form.addEventListener("submit", (event) => {
     if (!validateForm()) {
-        event.preventDefault();
+        // event.preventDefault();
     }
 });
